@@ -284,6 +284,16 @@ Full-Width Styles
   border-bottom-right-radius: 2px;
 }
 
+#logo {
+  float: left;
+  display: block;
+  width: 128px;
+  top: 20px;
+  height: 128px;
+  margin-right: 10px;
+  background: url('../logo/pig-128.png') no-repeat 0% 90%;
+}
+
 #header_wrap {
   background: #212121;
   background: -moz-linear-gradient(top, #373737, #212121);
