@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- game.cpp -->
+  <title>Game | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+</head>
+<li>Game</li>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">Game</h1>
+<span class="subtitle"></span>
+<!-- $$$Game-brief -->
+<p>The root element containing one or more Scene. <a href="#details">More...</a></p>
+<!-- @@@Game -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr></table><ul>
+<li><a href="qml-bacon2d-game-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-game.html#currentScene-prop">currentScene</a></b></b> : Scene</li>
+<li class="fn"><b><b><a href="qml-bacon2d-game.html#fps-prop">fps</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-bacon2d-game.html#gameName-prop">gameName</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-bacon2d-game.html#mouse-prop">mouse</a></b></b> : QPointF</li>
+</ul>
+<!-- $$$Game-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Game component is the root game component which contains one or more Scene components. Only one Scene will be set as <a href="qml-bacon2d-game.html#currentScene-prop">currentScene</a>.</p>
+<p>Example usage:</p>
+<pre class="qml">import QtQuick 2.0
+import Bacon2D 1.0
+
+<span class="type">Game</span> {
+    <span class="name">id</span>: <span class="name">game</span>
+    <span class="name">width</span>: <span class="number">800</span>
+    <span class="name">height</span>: <span class="number">600</span>
+
+    <span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span> {
+        <span class="name">id</span>: <span class="name">scene</span>
+        <span class="name">width</span>: <span class="number">300</span>
+        <span class="name">height</span>: <span class="number">300</span>
+    }
+}</pre>
+<!-- @@@Game -->
+<h2>Property Documentation</h2>
+<!-- $$$currentScene -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="currentScene-prop"></a><span class="name">currentScene</span> : <span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span></p></td></tr></table></div><div class="qmldoc"><p>The current Scene</p>
+</div></div><!-- @@@currentScene -->
+<br/>
+<!-- $$$fps -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fps-prop"></a><span class="name">fps</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>The current frame rate</p>
+</div></div><!-- @@@fps -->
+<br/>
+<!-- $$$gameName -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gameName-prop"></a><span class="name">gameName</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Name of the game, required if using Settings</p>
+</div></div><!-- @@@gameName -->
+<br/>
+<!-- $$$mouse -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="mouse-prop"></a><span class="name">mouse</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>The point in the plane of the mouse pointer</p>
+</div></div><!-- @@@mouse -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>

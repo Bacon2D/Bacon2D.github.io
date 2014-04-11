@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- scene.cpp -->
+  <title>Scene | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+</head>
+<li>Scene</li>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">Scene</h1>
+<span class="subtitle"></span>
+<!-- $$$Scene-brief -->
+<p>The root view in the Game. <a href="#details">More...</a></p>
+<!-- @@@Scene -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr></table><ul>
+<li><a href="qml-bacon2d-scene-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#debug-prop">debug</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#game-prop">game</a></b></b> : Game</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#running-prop">running</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#viewport-prop">viewport</a></b></b> : Viewport</li>
+</ul>
+<!-- $$$Scene-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Scene component is the root view for the <a href="qml-bacon2d-game.html">Game</a>.</p>
+<p>The size of the Scene can be larger than the size of the <a href="qml-bacon2d-game.html">Game</a>, accessible using a <a href="qml-bacon2d-viewport.html">Viewport</a>. The <a href="qml-bacon2d-viewport.html">Viewport</a> provides xOffset and yOffset properties which can be used to control movement of the Viewport.</p>
+<p>Example usage:</p>
+<pre class="qml">import QtQuick 2.0
+import Bacon2D 1.0
+
+<span class="type"><a href="qml-bacon2d-game.html">Game</a></span> {
+    <span class="name">id</span>: <span class="name">game</span>
+    <span class="name">width</span>: <span class="number">800</span>
+    <span class="name">height</span>: <span class="number">600</span>
+
+    <span class="type">Scene</span> {
+        <span class="name">id</span>: <span class="name">scene</span>
+        <span class="name">width</span>: <span class="number">1200</span>
+        <span class="name">height</span>: <span class="number">800</span>
+        <span class="name">viewport</span>: <span class="name">Viewport</span> {
+            <span class="name">yOffset</span>: <span class="name">player</span>.<span class="name">y</span> <span class="operator">-</span> <span class="number">100</span>
+        }
+        <span class="type"><a href="qml-bacon2d-entity.html">Entity</a></span> {
+            <span class="name">id</span>: <span class="name">player</span>
+        }
+    }
+}</pre>
+<!-- @@@Scene -->
+<h2>Property Documentation</h2>
+<!-- $$$debug -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="debug-prop"></a><span class="name">debug</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Debug mode</p>
+</div></div><!-- @@@debug -->
+<br/>
+<!-- $$$game -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="game-prop"></a><span class="name">game</span> : <span class="type"><a href="qml-bacon2d-game.html">Game</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Game that contains the Scene.</p>
+</div></div><!-- @@@game -->
+<br/>
+<!-- $$$running -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>The current running state of Scene</p>
+</div></div><!-- @@@running -->
+<br/>
+<!-- $$$viewport -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="viewport-prop"></a><span class="name">viewport</span> : <span class="type"><a href="qml-bacon2d-viewport.html">Viewport</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Viewport for the current Scene.</p>
+</div></div><!-- @@@viewport -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>
