@@ -48,10 +48,10 @@
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#angularDamping-prop">angularDamping</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#angularVelocity-prop">angularVelocity</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#awake-prop">awake</a></b></b> : bool</li>
-<li class="fn"><b><b><a href="qml-bacon2d-body.html#bodyType-prop">bodyType</a></b></b> : Body::BodyType</li>
+<li class="fn"><b><b><a href="qml-bacon2d-body.html#bodyType-prop">bodyType</a></b></b> : enumeration</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#bullet-prop">bullet</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#fixedRotation-prop">fixedRotation</a></b></b> : bool</li>
-<li class="fn"><b><b><a href="qml-bacon2d-body.html#fixtures-prop">fixtures</a></b></b> : QQmlListProperty&lt;Fixture&gt;</li>
+<li class="fn"><b><b><a href="qml-bacon2d-body.html#fixtures-prop">fixtures</a></b></b> : list&lt;Fixture&gt;</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#gravityScale-prop">gravityScale</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#linearDamping-prop">linearDamping</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-body.html#linearVelocity-prop">linearVelocity</a></b></b> : QPointF</li>
@@ -65,23 +65,23 @@
 <!-- @@@Body -->
 <h2>Property Documentation</h2>
 <!-- $$$active -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="active-prop"></a><span class="name">active</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="active-prop"></a><span class="name">active</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Returns true if the Body is active, or False if it is sleeping</p>
 </div></div><!-- @@@active -->
 <br/>
 <!-- $$$angularDamping -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="angularDamping-prop"></a><span class="name">angularDamping</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>Angular damping is use to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="angularDamping-prop"></a><span class="name">angularDamping</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property is used to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.</p>
 </div></div><!-- @@@angularDamping -->
 <br/>
 <!-- $$$angularVelocity -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="angularVelocity-prop"></a><span class="name">angularVelocity</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>The angular velocity of the body.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="angularVelocity-prop"></a><span class="name">angularVelocity</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the angular velocity of the body.</p>
 </div></div><!-- @@@angularVelocity -->
 <br/>
 <!-- $$$awake -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="awake-prop"></a><span class="name">awake</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>True if the current state of the Body is awake, or False if it is sleeping.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="awake-prop"></a><span class="name">awake</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Returns True if the Body is awake, or False if it is sleeping.</p>
 </div></div><!-- @@@awake -->
 <br/>
 <!-- $$$bodyType -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="bodyType-prop"></a><span class="name">bodyType</span> : <span class="type">Body::BodyType</span></p></td></tr></table></div><div class="qmldoc"><p>The body type: static, kinematic, or dynamic. Note: if a dynamic body would have zero mass, the mass is set to one.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="bodyType-prop"></a><span class="name">bodyType</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the current body type.</p>
 <table class="generic">
  <thead><tr class="qt-style"><th  colspan="2" rowspan=" 1"><i>Body::BodyType</i> is an enumeration:</th></tr>
 <tr class="qt-style"><th >Type</th><th >Description</th></tr></thead>
@@ -102,19 +102,19 @@
 </div></div><!-- @@@fixedRotation -->
 <br/>
 <!-- $$$fixtures -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fixtures-prop"></a><span class="name">fixtures</span> : <span class="type">QQmlListProperty</span>&lt;<span class="type"><a href="qml-bacon2d-fixture.html">Fixture</a></span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fixtures-prop"></a><span class="name">fixtures</span> : <span class="type">list</span>&lt;<span class="type"><a href="qml-bacon2d-fixture.html">Fixture</a></span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property holds a list of Box2D fixtures contained within the current Body.</p>
 </div></div><!-- @@@fixtures -->
 <br/>
 <!-- $$$gravityScale -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gravityScale-prop"></a><span class="name">gravityScale</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>You can use the gravity scale to adjust the gravity on a single body.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gravityScale-prop"></a><span class="name">gravityScale</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property represents the scale to adjust the gravity on a single body.</p>
 </div></div><!-- @@@gravityScale -->
 <br/>
 <!-- $$$linearDamping -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="linearDamping-prop"></a><span class="name">linearDamping</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>Linear damping is use to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="linearDamping-prop"></a><span class="name">linearDamping</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property is used to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.</p>
 </div></div><!-- @@@linearDamping -->
 <br/>
 <!-- $$$linearVelocity -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="linearVelocity-prop"></a><span class="name">linearVelocity</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>The linear velocity of the body's origin in world co-ordinates.</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="linearVelocity-prop"></a><span class="name">linearVelocity</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the linear velocity of the body's origin in world co-ordinates.</p>
 </div></div><!-- @@@linearVelocity -->
 <br/>
 <!-- $$$sleepingAllowed -->

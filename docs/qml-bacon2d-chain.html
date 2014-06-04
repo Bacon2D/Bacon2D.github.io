@@ -47,7 +47,7 @@
 <li class="fn"><b><b><a href="qml-bacon2d-chain.html#loop-prop">loop</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-bacon2d-chain.html#nextVertex-prop">nextVertex</a></b></b> : QPointF</li>
 <li class="fn"><b><b><a href="qml-bacon2d-chain.html#prevVertex-prop">prevVertex</a></b></b> : QPointF</li>
-<li class="fn"><b><b><a href="qml-bacon2d-chain.html#vertices-prop">vertices</a></b></b> : QVariantList</li>
+<li class="fn"><b><b><a href="qml-bacon2d-chain.html#vertices-prop">vertices</a></b></b> : list&lt;QPointF&gt;</li>
 </ul>
 <!-- $$$Chain-description -->
 <a name="details"></a>
@@ -55,19 +55,19 @@
 <!-- @@@Chain -->
 <h2>Property Documentation</h2>
 <!-- $$$loop -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="loop-prop"></a><span class="name">loop</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="loop-prop"></a><span class="name">loop</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property connects the last vertices to the first vertices completing a loop. This requires at least 3 vertices.</p>
 </div></div><!-- @@@loop -->
 <br/>
 <!-- $$$nextVertex -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="nextVertex-prop"></a><span class="name">nextVertex</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="nextVertex-prop"></a><span class="name">nextVertex</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the vertices of the next Chain, used for connecting multiple chains together by creating ghost vertices.</p>
 </div></div><!-- @@@nextVertex -->
 <br/>
 <!-- $$$prevVertex -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="prevVertex-prop"></a><span class="name">prevVertex</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="prevVertex-prop"></a><span class="name">prevVertex</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the vertices of the previous Chain, used for connecting multiple chains together by creating ghost vertices.</p>
 </div></div><!-- @@@prevVertex -->
 <br/>
 <!-- $$$vertices -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="vertices-prop"></a><span class="name">vertices</span> : <span class="type">QVariantList</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="vertices-prop"></a><span class="name">vertices</span> : <span class="type">list</span>&lt;<span class="type">QPointF</span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property holds a list of vertices that when connected define the Chain.</p>
 </div></div><!-- @@@vertices -->
 <br/>
  </div>

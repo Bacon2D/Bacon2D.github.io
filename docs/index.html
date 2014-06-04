@@ -37,15 +37,12 @@
 <ul>
 <li><b>Game</b>: The top-level container, provides the game loop and manages Scene changes. See also <a href="qml-bacon2d-game.html">Game</a>.</li>
 <li><b>Scene</b>: Container of game entities. Performs updates on each Entity in the Scene for each tick of the Game loop. See also <a href="qml-bacon2d-scene.html">Scene</a>.</li>
-<li><b>Viewport</b>: FIXME. See also <a href="qml-bacon2d-viewport.html">Viewport</a>.</li>
+<li><b>Viewport</b>: The visible portion of a larger Scene. See also <a href="qml-bacon2d-viewport.html">Viewport</a>.</li>
 <li><b>Behaviors</b>: Provides a means for AI in the game. See also <a href="qml-bacon2d-scriptbehavior.html">ScriptBehavior</a>.</li>
 <li><b>Box2D</b>: Physics engine for simulating rigid bodies in 2D. See also <a href="qml-bacon2d-world.html">World</a>.</li>
 <li><b>Parallax</b>: Infinite scrolling backgrounds with options to mirror images. See also <a href="qml-bacon2d-imagelayer.html">ImageLayer</a>.</li>
 <li><b>Entity</b>: The basic game entity, includes physics (Box2D) properties, responds to scene updates and can contain game logic. See also <a href="qml-bacon2d-imagelayer.html">ImageLayer</a>.</li>
 </ul>
-<a name="architectural-overview"></a>
-<h2>Architectural Overview</h2>
-<p>FIXME - insert diagram here</p>
 <a name="example-usage-basic-scene"></a>
 <h2>Example usage - Basic Scene</h2>
 <pre class="qml">import QtQuick 2.2
@@ -88,8 +85,8 @@ import Bacon2D 1.0
         }
     }
 }</pre>
-<a name="general-topics"></a>
-<h0>General Topics</h0>
+<a name="components"></a>
+<h0>Components</h0>
 <ul>
 <li><a href="qml-bacon2d-game.html">Game</a></li>
 <li><a href="qml-bacon2d-scene.html">Scene</a></li>
@@ -102,13 +99,11 @@ import Bacon2D 1.0
 <li><a href="qml-bacon2d-spriteanimation.html">SpriteAnimation</a></li>
 <li><a href="qml-bacon2d-scriptbehavior.html">ScriptBehavior</a></li>
 </ul>
+<p>Available through:</p>
+<pre class="cpp">    import Bacon2D <span class="number">1.0</span></pre>
 <a name="reporting-bugs"></a>
 <h0>Reporting Bugs</h0>
 <p>Please file a bugs on <a href="https://github.com/Bacon2D">Github</a></p>
-<a name="components"></a>
-<h0>Components</h0>
-<p>Available through:</p>
-<pre class="cpp">    import Bacon2D <span class="number">1.0</span></pre>
 </div>
 <!-- @@@index.html -->
 <p class="naviNextPrevious footerNavi">

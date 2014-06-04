@@ -34,10 +34,11 @@
 <h1 class="title">Entity</h1>
 <span class="subtitle"></span>
 <!-- $$$Entity-brief -->
-<p>FIXME <a href="#details">More...</a></p>
+<p>Entity is the base for any component used in your game. <a href="#details">More...</a></p>
 <!-- @@@Entity -->
 <table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-body.html">Body</a></p>
+</td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-sprite.html">Sprite</a>.</p>
 </td></tr></table><ul>
 <li><a href="qml-bacon2d-entity-members.html">List of all members, including inherited members</a></li>
 </ul>
@@ -50,14 +51,16 @@
 <!-- $$$Entity-description -->
 <a name="details"></a>
 <h2>Detailed Description</h2>
+<p>Entity inherits from the Box2D <a href="qml-bacon2d-body.html">Body</a> giving it physics properties, fixtures, collision detection, etc.</p>
+<p>Each Entity gets updated from the <a href="qml-bacon2d-scene.html">Scene</a> on each step of the game loop. The Entity can include a Behavior, which gets run on each update. You can also change the <a href="qml-bacon2d-entity.html#updateInterval-prop">updateInterval</a> so your Behavior doesn't get run on each update of the Entity, reducing processing time.</p>
 <!-- @@@Entity -->
 <h2>Property Documentation</h2>
 <!-- $$$behavior -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="behavior-prop"></a><span class="name">behavior</span> : <span class="type"><a href="qml-bacon2d-behavior.html">Behavior</a></span></p></td></tr></table></div><div class="qmldoc"><p>Behavior to be run on on each <a href="qml-bacon2d-entity.html#updateInterval-prop">updateInterval</a></p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="behavior-prop"></a><span class="name">behavior</span> : <span class="type"><a href="qml-bacon2d-behavior.html">Behavior</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the <a href="qml-bacon2d-behavior.html">Behavior</a> to be run on on each <a href="qml-bacon2d-entity.html#updateInterval-prop">updateInterval</a></p>
 </div></div><!-- @@@behavior -->
 <br/>
 <!-- $$$updateInterval -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="updateInterval-prop"></a><span class="name">updateInterval</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="updateInterval-prop"></a><span class="name">updateInterval</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the interval in milliseconds between execution of the Behavior.</p>
 </div></div><!-- @@@updateInterval -->
 <br/>
  </div>

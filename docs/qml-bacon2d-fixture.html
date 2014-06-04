@@ -29,12 +29,14 @@
 <ul>
 <li class="level1"><a href="#properties">Properties</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level3"><a href="#filtering">Filtering</a></li>
+<li class="level3"><a href="#categoryflags">CategoryFlags</a></li>
 </ul>
 </div>
 <h1 class="title">Fixture</h1>
 <span class="subtitle"></span>
 <!-- $$$Fixture-brief -->
-<p>A fixture binds a shape to a <a href="qml-bacon2d-body.html">Body</a> and adds material properties such as density, friction, and restitution. A fixture puts a shape into the collision system (broad-phase) so that it can collide with other shapes. <a href="#details">More...</a></p>
+<p>A fixture binds a shape to a <a href="qml-bacon2d-body.html">Body</a> and adds material properties such as density, friction, and restitution. <a href="#details">More...</a></p>
 <!-- @@@Fixture -->
 <table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherited By:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-box.html">Box</a>, <a href="qml-bacon2d-chain.html">Chain</a>, <a href="qml-bacon2d-circle.html">Circle</a>, <a href="qml-bacon2d-edge.html">Edge</a>, and <a href="qml-bacon2d-polygon.html">Polygon</a>.</p>
@@ -44,8 +46,8 @@
 <a name="properties"></a>
 <h2>Properties</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-bacon2d-fixture.html#categories-prop">categories</a></b></b> : CategoryFlags</li>
-<li class="fn"><b><b><a href="qml-bacon2d-fixture.html#collidesWith-prop">collidesWith</a></b></b> : CategoryFlags</li>
+<li class="fn"><b><b><a href="qml-bacon2d-fixture.html#categories-prop">categories</a></b></b> : list&lt;CategoryFlag&gt;</li>
+<li class="fn"><b><b><a href="qml-bacon2d-fixture.html#collidesWith-prop">collidesWith</a></b></b> : list&lt;CategoryFlag&gt;</li>
 <li class="fn"><b><b><a href="qml-bacon2d-fixture.html#density-prop">density</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-fixture.html#friction-prop">friction</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-fixture.html#groupIndex-prop">groupIndex</a></b></b> : int</li>
@@ -55,34 +57,72 @@
 <!-- $$$Fixture-description -->
 <a name="details"></a>
 <h2>Detailed Description</h2>
+<p>A fixture puts a shape into the collision system (broad-phase) so that it can collide with other shapes.</p>
+<a name="filtering"></a>
+<h4>Filtering</h4>
+<p>Collision filtering allows you to prevent collision between fixtures. For example, say you make a character that rides a bicycle. You want the bicycle to collide with the terrain and the character to collide with the terrain, but you don't want the character to collide with the bicycle (because they must overlap). Box2D supports such collision filtering using categories and groups.</p>
+<p>Box2D supports 16 collision categories. For each fixture you can specify which category it belongs to. You also specify what other categories this fixture can collide with. For example, you could specify in a multiplayer game that all players don't collide with each other and monsters don't collide with each other, but players and monsters should collide. This is done with masking bits. For example:</p>
+<p>Collision groups let you specify an integral group index. You can have all fixtures with the same group index always collide (positive index) or never collide (negative index). Group indices are usually used for things that are somehow related, like the parts of a bicycle. In the following example, fixture1 and fixture2 always collide, but fixture3 and fixture4 never collide.</p>
+<p>Collisions between fixtures of different group indices are filtered according the category and mask bits. In other words, group filtering has higher precedence than category filtering.</p>
+<p>Note that additional collision filtering occurs in Box2D. Here is a list:</p>
+<ul>
+<li>A fixture on a static body can only collide with a dynamic body.</li>
+<li>A fixture on a kinematic body can only collide with a dynamic body.</li>
+<li>Fixtures on the same body never collide with each other.</li>
+<li>You can optionally enable/disable collision between fixtures on bodies connected by a joint.</li>
+</ul>
+<a name="categoryflags"></a>
+<h4>CategoryFlags</h4>
+<p>CategoryFlag is an enumeration of 16 Categories</p>
+<ul>
+<li>Category1</li>
+<li>Category2</li>
+<li>...</li>
+<li>Category15</li>
+<li>Category16</li>
+</ul>
 <!-- @@@Fixture -->
 <h2>Property Documentation</h2>
 <!-- $$$categories -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="categories-prop"></a><span class="name">categories</span> : <span class="type">CategoryFlags</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="categories-prop"></a><span class="name">categories</span> : <span class="type">list</span>&lt;<span class="type">CategoryFlag</span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property represents a list of <a href="qml-bacon2d-fixture.html#categoryflags">CategoryFlags</a> assigned to the Fixture.</p>
+<p>These categories are used for Collision filtering.</p>
+<p><b>See also </b><a href="qml-bacon2d-fixture.html#filtering">Filtering</a>.</p>
 </div></div><!-- @@@categories -->
 <br/>
 <!-- $$$collidesWith -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="collidesWith-prop"></a><span class="name">collidesWith</span> : <span class="type">CategoryFlags</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="collidesWith-prop"></a><span class="name">collidesWith</span> : <span class="type">list</span>&lt;<span class="type">CategoryFlag</span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property represents a list of <a href="qml-bacon2d-fixture.html#categoryflags">CategoryFlags</a> the Fixture should collide with.</p>
+<p>These categories are used for Collision filtering.</p>
+<p><b>See also </b><a href="qml-bacon2d-fixture.html#filtering">Filtering</a>.</p>
 </div></div><!-- @@@collidesWith -->
 <br/>
 <!-- $$$density -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="density-prop"></a><span class="name">density</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="density-prop"></a><span class="name">density</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property represents the density used to compute the mass properties of the parent body.</p>
+<p>The density can be zero or positive. You should generally use similar densities for all your fixtures. This will improve stacking stability.</p>
 </div></div><!-- @@@density -->
 <br/>
 <!-- $$$friction -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="friction-prop"></a><span class="name">friction</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="friction-prop"></a><span class="name">friction</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>Friction is used to make objects slide along each other realistically.</p>
+<p>Box2D supports static and dynamic friction, but uses the same parameter for both. Friction is simulated accurately in Box2D and the friction strength is proportional to the normal force (this is called Coulomb friction). The friction parameter is usually set between 0 and 1, but can be any non-negative value. A friction value of 0 turns off friction and a value of 1 makes the friction strong. When the friction force is computed between two shapes, Box2D must combine the friction parameters of the two parent fixtures. This is done with the geometric mean:</p>
+<pre class="cpp">var friction <span class="operator">=</span> Math<span class="operator">.</span>sqrt(fixtureA<span class="operator">.</span>friction <span class="operator">*</span> fixtureB<span class="operator">.</span>friction);</pre>
+<p>So if one fixture has zero friction then the contact will have zero friction.</p>
 </div></div><!-- @@@friction -->
 <br/>
 <!-- $$$groupIndex -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="groupIndex-prop"></a><span class="name">groupIndex</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="groupIndex-prop"></a><span class="name">groupIndex</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>This property represents the index of a group the Fixture should be considered part of for Collision filtering.</p>
+<p><b>See also </b><a href="qml-bacon2d-fixture.html#filtering">Filtering</a>.</p>
 </div></div><!-- @@@groupIndex -->
 <br/>
 <!-- $$$restitution -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="restitution-prop"></a><span class="name">restitution</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="restitution-prop"></a><span class="name">restitution</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>Restitution is used to make objects bounce.</p>
+<p>The restitution value is usually set to be between 0 and 1. Consider dropping a ball on a table. A value of zero means the ball won't bounce. This is called an inelastic collision. A value of one means the ball's velocity will be exactly reflected. This is called a perfectly elastic collision. Restitution is combined using the following formula.</p>
+<pre class="cpp">var restitution <span class="operator">=</span> Math<span class="operator">.</span>max(fixtureA<span class="operator">.</span>restitution<span class="operator">,</span>  fixtureB<span class="operator">.</span>restitution);</pre>
+<p>Restitution is combined this way so that you can have a bouncy super ball without having a bouncy floor.</p>
 </div></div><!-- @@@restitution -->
 <br/>
 <!-- $$$sensor -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sensor-prop"></a><span class="name">sensor</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sensor-prop"></a><span class="name">sensor</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property determines if the fixtures is considered a sensor during collision detection.</p>
+<p>Sometimes game logic needs to know when two fixtures overlap yet there should be no collision response. This is done by using sensors. A sensor is a fixture that detects collision but does not produce a response.</p>
+<p>You can flag any fixture as being a sensor. Sensors may be static, kinematic, or dynamic. Remember that you may have multiple fixtures per body and you can have any mix of sensors and solid fixtures. Also, sensors only form contacts when at least one body is dynamic, so you will not get a contact for kinematic versus kinematic, kinematic versus static, or static versus static.</p>
 </div></div><!-- @@@sensor -->
 <br/>
  </div>

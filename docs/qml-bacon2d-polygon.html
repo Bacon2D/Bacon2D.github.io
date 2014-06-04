@@ -34,7 +34,7 @@
 <h1 class="title">Polygon</h1>
 <span class="subtitle"></span>
 <!-- $$$Polygon-brief -->
-<p>FIXME <a href="#details">More...</a></p>
+<p>Polygon shapes are solid convex polygons. <a href="#details">More...</a></p>
 <!-- @@@Polygon -->
 <table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-fixture.html">Fixture</a></p>
@@ -44,15 +44,17 @@
 <a name="properties"></a>
 <h2>Properties</h2>
 <ul>
-<li class="fn"><b><b><a href="qml-bacon2d-polygon.html#vertices-prop">vertices</a></b></b> : QVariantList</li>
+<li class="fn"><b><b><a href="qml-bacon2d-polygon.html#vertices-prop">vertices</a></b></b> : list&lt;QPointF&gt;</li>
 </ul>
 <!-- $$$Polygon-description -->
 <a name="details"></a>
 <h2>Detailed Description</h2>
+<p>A polygon is convex when all line segments connecting two points in the interior do not cross any edge of the polygon. Polygons are solid and never hollow. A polygon must have 3 or more vertices.</p>
 <!-- @@@Polygon -->
 <h2>Property Documentation</h2>
 <!-- $$$vertices -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="vertices-prop"></a><span class="name">vertices</span> : <span class="type">QVariantList</span></p></td></tr></table></div><div class="qmldoc"><p>FIXME</p>
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="vertices-prop"></a><span class="name">vertices</span> : <span class="type">list</span>&lt;<span class="type">QPointF</span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property holds a list of vertices that when connected define the Polygon.</p>
+<p>The vertices will be connected in a counter clockwise direction.</p>
 </div></div><!-- @@@vertices -->
 <br/>
  </div>
