@@ -44,9 +44,9 @@
 <h2>Properties</h2>
 <ul>
 <li class="fn"><b><b><a href="qml-bacon2d-game.html#currentScene-prop">currentScene</a></b></b> : Scene</li>
-<li class="fn"><b><b><a href="qml-bacon2d-game.html#fps-prop">fps</a></b></b> : int</li>
 <li class="fn"><b><b><a href="qml-bacon2d-game.html#gameName-prop">gameName</a></b></b> : string</li>
 <li class="fn"><b><b><a href="qml-bacon2d-game.html#mouse-prop">mouse</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-game.html#ups-prop">ups</a></b></b> : int</li>
 </ul>
 <!-- $$$Game-description -->
 <a name="details"></a>
@@ -73,10 +73,6 @@ import Bacon2D 1.0
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="currentScene-prop"></a><span class="name">currentScene</span> : <span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span></p></td></tr></table></div><div class="qmldoc"><p>The current Scene</p>
 </div></div><!-- @@@currentScene -->
 <br/>
-<!-- $$$fps -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fps-prop"></a><span class="name">fps</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>The current frame rate</p>
-</div></div><!-- @@@fps -->
-<br/>
 <!-- $$$gameName -->
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gameName-prop"></a><span class="name">gameName</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>Name of the game, required if using Settings</p>
 </div></div><!-- @@@gameName -->
@@ -84,6 +80,11 @@ import Bacon2D 1.0
 <!-- $$$mouse -->
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="mouse-prop"></a><span class="name">mouse</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>The point in the plane of the mouse pointer</p>
 </div></div><!-- @@@mouse -->
+<br/>
+<!-- $$$ups -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="ups-prop"></a><span class="name">ups</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the number of times update is called per second.</p>
+<p>Updates per second can be used to control the speed of the game loop. The default is 30.</p>
+</div></div><!-- @@@ups -->
 <br/>
  </div>
  <div id="footer_wrap" class="outer">
