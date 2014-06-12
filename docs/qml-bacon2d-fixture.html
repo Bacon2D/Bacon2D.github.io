@@ -60,11 +60,11 @@
 <p>A fixture puts a shape into the collision system (broad-phase) so that it can collide with other shapes.</p>
 <a name="filtering"></a>
 <h4>Filtering</h4>
-<p>Collision filtering allows you to prevent collision between fixtures. For example, say you make a character that rides a bicycle. You want the bicycle to collide with the terrain and the character to collide with the terrain, but you don't want the character to collide with the bicycle (because they must overlap). Box2D supports such collision filtering using categories and groups.</p>
-<p>Box2D supports 16 collision categories. For each fixture you can specify which category it belongs to. You also specify what other categories this fixture can collide with. For example, you could specify in a multiplayer game that all players don't collide with each other and monsters don't collide with each other, but players and monsters should collide. This is done with masking bits. For example:</p>
+<p>Collision filtering allows you to prevent collision between fixtures. For example, say you make a character that rides a bicycle. You want the bicycle to collide with the terrain and the character to collide with the terrain, but you don't want the character to collide with the bicycle (because they must overlap). <a href="box2d.html">Box2D</a> supports such collision filtering using categories and groups.</p>
+<p><a href="box2d.html">Box2D</a> supports 16 collision categories. For each fixture you can specify which category it belongs to. You also specify what other categories this fixture can collide with. For example, you could specify in a multiplayer game that all players don't collide with each other and monsters don't collide with each other, but players and monsters should collide. This is done with masking bits. For example:</p>
 <p>Collision groups let you specify an integral group index. You can have all fixtures with the same group index always collide (positive index) or never collide (negative index). Group indices are usually used for things that are somehow related, like the parts of a bicycle. In the following example, fixture1 and fixture2 always collide, but fixture3 and fixture4 never collide.</p>
 <p>Collisions between fixtures of different group indices are filtered according the category and mask bits. In other words, group filtering has higher precedence than category filtering.</p>
-<p>Note that additional collision filtering occurs in Box2D. Here is a list:</p>
+<p>Note that additional collision filtering occurs in <a href="box2d.html">Box2D</a>. Here is a list:</p>
 <ul>
 <li>A fixture on a static body can only collide with a dynamic body.</li>
 <li>A fixture on a kinematic body can only collide with a dynamic body.</li>
@@ -102,7 +102,7 @@
 <br/>
 <!-- $$$friction -->
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="friction-prop"></a><span class="name">friction</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>Friction is used to make objects slide along each other realistically.</p>
-<p>Box2D supports static and dynamic friction, but uses the same parameter for both. Friction is simulated accurately in Box2D and the friction strength is proportional to the normal force (this is called Coulomb friction). The friction parameter is usually set between 0 and 1, but can be any non-negative value. A friction value of 0 turns off friction and a value of 1 makes the friction strong. When the friction force is computed between two shapes, Box2D must combine the friction parameters of the two parent fixtures. This is done with the geometric mean:</p>
+<p><a href="box2d.html">Box2D</a> supports static and dynamic friction, but uses the same parameter for both. Friction is simulated accurately in <a href="box2d.html">Box2D</a> and the friction strength is proportional to the normal force (this is called Coulomb friction). The friction parameter is usually set between 0 and 1, but can be any non-negative value. A friction value of 0 turns off friction and a value of 1 makes the friction strong. When the friction force is computed between two shapes, <a href="box2d.html">Box2D</a> must combine the friction parameters of the two parent fixtures. This is done with the geometric mean:</p>
 <pre class="cpp">var friction <span class="operator">=</span> Math<span class="operator">.</span>sqrt(fixtureA<span class="operator">.</span>friction <span class="operator">*</span> fixtureB<span class="operator">.</span>friction);</pre>
 <p>So if one fixture has zero friction then the contact will have zero friction.</p>
 </div></div><!-- @@@friction -->
