@@ -9,8 +9,8 @@
   <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
 </head>
-<li>Box2D</li>
 <li id="buildversion">
 </li>
 <body>
@@ -23,10 +23,16 @@
      </header>
  </div>
  <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="#">Contact</a></li>
+   </ul>
    <section id="main_content" class="inner">
   <link rel="prev" href="index.html" />
 <p class="naviNextPrevious headerNavi">
-<a class="prevPage" href="index.html">Bacon2D</a>
+<a class="prevPage" href="index.html">index.html</a>
 </p><p/>
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
@@ -57,7 +63,6 @@
 <li><b>Joint</b>: This is a constraint used to hold two or more bodies together. Box2D supports several joint types: revolute, prismatic, distance, and more. Some joints may have limits and motors.</li>
 <li><b>Joint limit</b>: A joint limit restricts the range of motion of a joint. For example, the human elbow only allows a certain range of angles.</li>
 <li><b>Joint motor</b>: A joint motor drives the motion of the connected bodies according to the joint's degrees of freedom. For example, you can use a motor to drive the rotation of an elbow.</li>
-<li><b>World</b>: A physics world is a collection of bodies, fixtures, and constraints that interact together. Box2D supports the creation of multiple worlds, but this is usually not necessary or desirable. See also <a href="qml-bacon2d-world.html">World</a>.</li>
 <li><b>Solver</b>: The physics world has a solver that is used to advance time and to resolve contact and joint constraints. The Box2D solver is a high performance iterative solver that operates in order N time, where N is the number of constraints.</li>
 <li><b>Continuous collision</b>: The solver advances bodies in time using discrete time steps. Without intervention this can lead to tunneling.</li>
 </ul>
@@ -68,7 +73,6 @@
 <a name="components"></a>
 <h0>Components</h0>
 <ul>
-<li><a href="qml-bacon2d-world.html">World</a></li>
 <li><a href="qml-bacon2d-body.html">Body</a></li>
 <li><a href="qml-bacon2d-fixture.html">Fixture</a></li>
 <li><a href="qml-bacon2d-joint.html">Joint</a></li>
@@ -93,7 +97,7 @@
 </div>
 <!-- @@@box2d.html -->
 <p class="naviNextPrevious footerNavi">
-<a class="prevPage" href="index.html">Bacon2D</a>
+<a class="prevPage" href="index.html">index.html</a>
 </p>
  </div>
  <div id="footer_wrap" class="outer">

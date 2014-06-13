@@ -9,6 +9,7 @@
   <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
 </head>
 <li id="buildversion">
 </li>
@@ -22,6 +23,12 @@
      </header>
  </div>
  <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="#">Contact</a></li>
+   </ul>
    <section id="main_content" class="inner">
 <span class="subtitle"></span>
 <!-- $$$Bacon2D-description -->
@@ -49,18 +56,17 @@
 <tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-gearjoint.html">GearJoint</a></p></td><td class="tblDescr"><p></p></td></tr>
 <tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-ropejoint.html">RopeJoint</a></p></td><td class="tblDescr"><p></p></td></tr>
 <tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-raycast.html">RayCast</a></p></td><td class="tblDescr"><p></p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-world.html">World</a></p></td><td class="tblDescr"><p>A physics world is a collection of bodies, fixtures, and constraints that interact together.</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-behavior.html">Behavior</a></p></td><td class="tblDescr"><p>Provides an easy way to add custom behaviors to the game, like artificial intelligence or other game logic</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-entity.html">Entity</a></p></td><td class="tblDescr"><p>Entity is the base for any component used in your game.</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-game.html">Game</a></p></td><td class="tblDescr"><p>The root element containing one or more Scene.</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-imagelayer.html">ImageLayer</a></p></td><td class="tblDescr"><p>A layer created from a image</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-layer.html">Layer</a></p></td><td class="tblDescr"><p>Is the base component providing common properties and functionality needed by other Layer types. See ImageLayer.</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-scene.html">Scene</a></p></td><td class="tblDescr"><p>The root view in the Game.</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-scriptbehavior.html">ScriptBehavior</a></p></td><td class="tblDescr"><p>ScriptBehavior is a Behavior including a script to evaluate on each update.</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-settings.html">Settings</a></p></td><td class="tblDescr"><p>Provides local storage for settings or any in game data</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-sprite.html">Sprite</a></p></td><td class="tblDescr"><p>A Sprite representation of an Entity, providing state based management of multiple SpriteAnimation animations.</p></td></tr>
-<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-spriteanimation.html">SpriteAnimation</a></p></td><td class="tblDescr"><p>An animation representing a state of a Sprite</p></td></tr>
-<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-viewport.html">Viewport</a></p></td><td class="tblDescr"><p>The visible portion of a larger Scene.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-behavior.html">Behavior</a></p></td><td class="tblDescr"><p>Provides an easy way to add custom behaviors to the game, like artificial intelligence or other game logic</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-entity.html">Entity</a></p></td><td class="tblDescr"><p>Entity is the base for any component used in your game.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-game.html">Game</a></p></td><td class="tblDescr"><p>The root element containing one or more Scene.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-imagelayer.html">ImageLayer</a></p></td><td class="tblDescr"><p>A layer created from a image</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-layer.html">Layer</a></p></td><td class="tblDescr"><p>Is the base component providing common properties and functionality needed by other Layer types. See ImageLayer.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-scene.html">Scene</a></p></td><td class="tblDescr"><p>The root view in the Game.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-scriptbehavior.html">ScriptBehavior</a></p></td><td class="tblDescr"><p>ScriptBehavior is a Behavior including a script to evaluate on each update.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-settings.html">Settings</a></p></td><td class="tblDescr"><p>Provides local storage for settings or any in game data</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-sprite.html">Sprite</a></p></td><td class="tblDescr"><p>A Sprite representation of an Entity, providing state based management of multiple SpriteAnimation animations.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-bacon2d-spriteanimation.html">SpriteAnimation</a></p></td><td class="tblDescr"><p>An animation representing a state of a Sprite</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-bacon2d-viewport.html">Viewport</a></p></td><td class="tblDescr"><p>The visible portion of a larger Scene.</p></td></tr>
 </table>
  </div>
  <div id="footer_wrap" class="outer">

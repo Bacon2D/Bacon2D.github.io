@@ -9,8 +9,8 @@
   <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
 </head>
-<li>Scene</li>
 <li id="buildversion">
 </li>
 <body>
@@ -23,11 +23,18 @@
      </header>
  </div>
  <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="#">Contact</a></li>
+   </ul>
    <section id="main_content" class="inner">
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
 <li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
@@ -45,8 +52,17 @@
 <ul>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#debug-prop">debug</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#game-prop">game</a></b></b> : Game</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#gravity-prop">gravity</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#physics-prop">physics</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#pixelsPerMeter-prop">pixelsPerMeter</a></b></b> : float</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#running-prop">running</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#viewport-prop">viewport</a></b></b> : Viewport</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#world-prop">world</a></b></b> : World</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="qml-bacon2d-scene.html#rayCast-method">rayCast</a></b></b>(RayCast * <i>rayCast</i>, const QPointF &amp; <i>point1</i>, const QPointF &amp; <i>point2</i>)</li>
 </ul>
 <!-- $$$Scene-description -->
 <a name="details"></a>
@@ -66,6 +82,7 @@ import Bacon2D 1.0
         <span class="name">id</span>: <span class="name">scene</span>
         <span class="name">width</span>: <span class="number">1200</span>
         <span class="name">height</span>: <span class="number">800</span>
+        <span class="name">physics</span>: <span class="number">true</span>
         <span class="name">viewport</span>: <span class="name">Viewport</span> {
             <span class="name">yOffset</span>: <span class="name">player</span>.<span class="name">y</span> <span class="operator">-</span> <span class="number">100</span>
         }
@@ -84,6 +101,20 @@ import Bacon2D 1.0
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="game-prop"></a><span class="name">game</span> : <span class="type"><a href="qml-bacon2d-game.html">Game</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Game that contains the Scene.</p>
 </div></div><!-- @@@game -->
 <br/>
+<!-- $$$gravity -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gravity-prop"></a><span class="name">gravity</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the global gravity vector.</p>
+<p>The gravity property only applies if physics is enabled.</p>
+</div></div><!-- @@@gravity -->
+<br/>
+<!-- $$$physics -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="physics-prop"></a><span class="name">physics</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property determines if the Scene contains a <a href="box2d.html">Box2D</a> physics world</p>
+</div></div><!-- @@@physics -->
+<br/>
+<!-- $$$pixelsPerMeter -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="pixelsPerMeter-prop"></a><span class="name">pixelsPerMeter</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the number of pixels per meter.</p>
+<p>The physics world uses meters to measure velocity, movement, etc. This property only applies with physics enabled.</p>
+</div></div><!-- @@@pixelsPerMeter -->
+<br/>
 <!-- $$$running -->
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>The current running state of Scene</p>
 </div></div><!-- @@@running -->
@@ -91,6 +122,16 @@ import Bacon2D 1.0
 <!-- $$$viewport -->
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="viewport-prop"></a><span class="name">viewport</span> : <span class="type"><a href="qml-bacon2d-viewport.html">Viewport</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Viewport for the current Scene.</p>
 </div></div><!-- @@@viewport -->
+<br/>
+<!-- $$$world -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="world-prop"></a><span class="name">world</span> : <span class="type">World</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the World attached to the Scene.</p>
+</div></div><!-- @@@world -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$rayCast -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="rayCast-method"></a><span class="type">void</span> <span class="name">rayCast</span>(<span class="type"><a href="qml-bacon2d-raycast.html">RayCast</a></span> *<i> rayCast</i>, const <span class="type">QPointF</span> &amp;<i> point1</i>, const <span class="type">QPointF</span> &amp;<i> point2</i>)</p></td></tr></table></div><div class="qmldoc"><p>The rayCast method can be used to do line-of-sight checks, fire guns, etc.</p>
+<p>The rayCast method is only useful with physics is enabled.</p>
+</div></div><!-- @@@rayCast -->
 <br/>
  </div>
  <div id="footer_wrap" class="outer">
