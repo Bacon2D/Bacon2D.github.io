@@ -52,11 +52,13 @@
 <h2>Physics simulation</h2>
 <p><a href="bacon2d-qmlmodule.html">Bacon2D</a> includes Box2D for physics simulation, making it easy to add physics properties to game entities.</p>
 <p>Box2D is a 2D rigid body simulation library for games. Programmers can use it in their games to make objects move in realistic ways and make the game world more interactive.</p>
+<p>Box2D is widely used by many game engines and games, in multiple programming languages. Thus there are lots of great references available to help learn how to effectlive use it in your game. Please note, Box2D uses the term &quot;body&quot; for any item that is participating in the Box2D &quot;world&quot;. The world defines the physics world of the game, and all bodies found in the world can interact/react with other bodies in the world. In <a href="bacon2d-qmlmodule.html">Bacon2D</a> the &quot;world&quot; is provided as part of the <a href="qml-bacon2d-scene.html">Scene</a>, if the scene has the physics property set to true. <a href="bacon2d-qmlmodule.html">Bacon2D</a> provides the <a href="qml-bacon2d-entity.html">Entity</a> component, which when physics are enabled in the scene, becomes a body in the Box2D world. When you see the terms body and world used, you can think of them as a scene and entity in <a href="bacon2d-qmlmodule.html">Bacon2D</a>.</p>
 <a name="core-concepts"></a>
 <h2>Core concepts</h2>
 <ul>
 <li><b>Shape</b>: A shape is 2D geometrical object, such as a circle or polygon. See also <a href="qml-bacon2d-fixture.html">Fixture</a>.</li>
-<li><b>Body</b>: A chunk of matter that is so strong that the distance between any two bits of matter on the chunk is constant.. See also <a href="qml-bacon2d-body.html">Body</a>.</li>
+<li><b>Body</b>: A chunk of matter that is so strong that the distance between any two bits of matter on the chunk is constant. In <a href="bacon2d-qmlmodule.html">Bacon2D</a>, your entities are bodies in Box2D See also <a href="qml-bacon2d-entity.html">Entity</a>.</li>
+<li><b>World</b>: In Box2D, the World defines the physics container in which all bodies become part of. In <a href="bacon2d-qmlmodule.html">Bacon2D</a>, the world is provided by the <a href="qml-bacon2d-scene.html">Scene</a> if physics is enabled. See also <a href="qml-bacon2d-scene.html">Scene</a>.</li>
 <li><b>Fixture</b>: A fixture binds a shape to a body and adds material properties such as density, friction, and restitution. A fixture puts a shape into the collision system (broad-phase) so that it can collide with other shapes. See also <a href="qml-bacon2d-fixture.html">Fixture</a>.</li>
 <li><b>Constraint</b>: A constraint is a physical connection that removes degrees of freedom from bodies. A 2D body has 3 degrees of freedom (two translation coordinates and one rotation coordinate). If we take a body and pin it to the wall (like a pendulum) we have constrained the body to the wall. At this point the body can only rotate about the pin, so the constraint has removed 2 degrees of freedom.</li>
 <li><b>Contact constraint</b>: A special constraint designed to prevent penetration of rigid bodies and to simulate friction and restitution. You do not create contact constraints; they are created automatically by Box2D.</li>
@@ -73,7 +75,7 @@
 <a name="components"></a>
 <h0>Components</h0>
 <ul>
-<li><a href="qml-bacon2d-body.html">Body</a></li>
+<li><a href="qml-bacon2d-entity.html">Entity</a></li>
 <li><a href="qml-bacon2d-fixture.html">Fixture</a></li>
 <li><a href="qml-bacon2d-joint.html">Joint</a></li>
 <li><a href="qml-bacon2d-distancejoint.html">DistanceJoint</a></li>
