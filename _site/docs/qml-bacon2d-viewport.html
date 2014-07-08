@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- viewport.cpp -->
+  <title>Viewport | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
+</head>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="/contact.html">Contact</a></li>
+   </ul>
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">Viewport</h1>
+<span class="subtitle"></span>
+<!-- $$$Viewport-brief -->
+<p>The visible portion of a larger <a href="qml-bacon2d-scene.html">Scene</a>. <a href="#details">More...</a></p>
+<!-- @@@Viewport -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr></table><ul>
+<li><a href="qml-bacon2d-viewport-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-viewport.html#animationDuration-prop">animationDuration</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-bacon2d-viewport.html#xOffset-prop">xOffset</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-viewport.html#yOffset-prop">yOffset</a></b></b> : float</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-viewport.html#hScroll-method">hScroll</a></b></b>(float <i>step</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-viewport.html#yScroll-method">yScroll</a></b></b>(float <i>step</i>)</li>
+</ul>
+<!-- $$$Viewport-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Viewport is the visible area of a larger <a href="qml-bacon2d-scene.html">Scene</a> and can be scrolled horizontally or vertically showing different parts of the larger <a href="qml-bacon2d-scene.html">Scene</a>.</p>
+<!-- @@@Viewport -->
+<h2>Property Documentation</h2>
+<!-- $$$animationDuration -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="animationDuration-prop"></a><span class="name">animationDuration</span> : <span class="type">int</span></p></td></tr></table></div><div class="qmldoc"><p>Viewport scrolling uses an animation, the animationDuration property sets the duration in milliseconds of that animation. You can change this duration for smooth panning of the Viewport. The default is 100ms.</p>
+</div></div><!-- @@@animationDuration -->
+<br/>
+<!-- $$$xOffset -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="xOffset-prop"></a><span class="name">xOffset</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the horizontal offset of the Viewport's x property from the Scene's x property.</p>
+</div></div><!-- @@@xOffset -->
+<br/>
+<!-- $$$yOffset -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="yOffset-prop"></a><span class="name">yOffset</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the vertical offset of the Viewport's y property from the Scene's y property.</p>
+</div></div><!-- @@@yOffset -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$hScroll -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="hScroll-method"></a><span class="name">hScroll</span>(<span class="type">float</span><i> step</i>)</p></td></tr></table></div><div class="qmldoc"><p>Scroll the Viewport horizontally by <i>step</i></p>
+</div></div><!-- @@@hScroll -->
+<br/>
+<!-- $$$yScroll -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="yScroll-method"></a><span class="name">yScroll</span>(<span class="type">float</span><i> step</i>)</p></td></tr></table></div><div class="qmldoc"><p>Scroll the Viewport vertically by <i>step</i></p>
+</div></div><!-- @@@yScroll -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>

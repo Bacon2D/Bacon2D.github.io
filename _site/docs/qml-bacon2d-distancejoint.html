@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- joints.qdoc -->
+  <title>DistanceJoint | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
+</head>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="/contact.html">Contact</a></li>
+   </ul>
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">DistanceJoint</h1>
+<span class="subtitle"></span>
+<!-- $$$DistanceJoint-brief -->
+<p>Distance Joint <a href="#details">More...</a></p>
+<!-- @@@DistanceJoint -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-joint.html">Joint</a></p>
+</td></tr></table><ul>
+<li><a href="qml-bacon2d-distancejoint-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-distancejoint.html#dampingRatio-prop">dampingRatio</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-distancejoint.html#frequencyHz-prop">frequencyHz</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-distancejoint.html#length-prop">length</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-distancejoint.html#localAnchorA-prop">localAnchorA</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-distancejoint.html#localAnchorB-prop">localAnchorB</a></b></b> : QPointF</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">QPointF <b><b><a href="qml-bacon2d-distancejoint.html#getReactionForce-method">getReactionForce</a></b></b>(float <i>inv_dt</i>)</li>
+<li class="fn">float <b><b><a href="qml-bacon2d-distancejoint.html#getReactionTorque-method">getReactionTorque</a></b></b>(float <i>inv_dt</i>)</li>
+</ul>
+<!-- $$$DistanceJoint-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>A distance joint constrains two points on two bodies to remain at a fixed distance from each other. You can view this as a massless, rigid rod.</p>
+<!-- @@@DistanceJoint -->
+<h2>Property Documentation</h2>
+<!-- $$$dampingRatio -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="dampingRatio-prop"></a><span class="name">dampingRatio</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the mass-spring-damper frequency in Hertz. A value of 0 disables softness.</p>
+</div></div><!-- @@@dampingRatio -->
+<br/>
+<!-- $$$frequencyHz -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="frequencyHz-prop"></a><span class="name">frequencyHz</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the mass-spring-damper frequency in Hertz. A value of 0 disables softness.</p>
+</div></div><!-- @@@frequencyHz -->
+<br/>
+<!-- $$$length -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="length-prop"></a><span class="name">length</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the natural length between the anchor points.</p>
+</div></div><!-- @@@length -->
+<br/>
+<!-- $$$localAnchorA -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="localAnchorA-prop"></a><span class="name">localAnchorA</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the local anchor point relative to bodyA's origin</p>
+</div></div><!-- @@@localAnchorA -->
+<br/>
+<!-- $$$localAnchorB -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="localAnchorB-prop"></a><span class="name">localAnchorB</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the local anchor point relative to bodyB's origin</p>
+</div></div><!-- @@@localAnchorB -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$getReactionForce -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getReactionForce-method"></a><span class="type">QPointF</span> <span class="name">getReactionForce</span>(<span class="type">float</span><i> inv_dt</i>) const</p></td></tr></table></div><div class="qmldoc"><p>Get the reaction force given the inverse time step.</p>
+</div></div><!-- @@@getReactionForce -->
+<br/>
+<!-- $$$getReactionTorque -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getReactionTorque-method"></a><span class="type">float</span> <span class="name">getReactionTorque</span>(<span class="type">float</span><i> inv_dt</i>) const</p></td></tr></table></div><div class="qmldoc"><p>Get the reaction torque given the inverse time step. Unit is N*m. This is always zero for a distance joint.</p>
+</div></div><!-- @@@getReactionTorque -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>

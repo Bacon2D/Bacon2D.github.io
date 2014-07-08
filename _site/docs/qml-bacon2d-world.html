@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- world.qdoc -->
+  <title>World | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+</head>
+<li>World</li>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">World</h1>
+<span class="subtitle"></span>
+<!-- $$$World-brief -->
+<p>A physics world is a collection of bodies, fixtures, and constraints that interact together. <a href="#details">More...</a></p>
+<!-- @@@World -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr></table><ul>
+<li><a href="qml-bacon2d-world-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-world.html#gravity-prop">gravity</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-world.html#pixelsPerMeter-prop">pixelsPerMeter</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-world.html#running-prop">running</a></b></b> : bool</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="qml-bacon2d-world.html#rayCast-method">rayCast</a></b></b>(RayCast <i>ray</i>, QPointF <i>point1</i>, QPointF <i>point2</i>)</li>
+</ul>
+<!-- $$$World-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<pre class="qml"><span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span> {
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">150</span>
+    <span class="type">World</span> {
+        <span class="name">id</span>: <span class="name">world</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+    }
+}</pre>
+<!-- @@@World -->
+<h2>Property Documentation</h2>
+<!-- $$$gravity -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gravity-prop"></a><span class="name">gravity</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the global gravity vector.</p>
+</div></div><!-- @@@gravity -->
+<br/>
+<!-- $$$pixelsPerMeter -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="pixelsPerMeter-prop"></a><span class="name">pixelsPerMeter</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the number of pixels per meter.</p>
+<p>The physics world uses meters to measure velocity, movement, etc.</p>
+</div></div><!-- @@@pixelsPerMeter -->
+<br/>
+<!-- $$$running -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property represents the current running state of the World</p>
+</div></div><!-- @@@running -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$rayCast -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="rayCast-method"></a><span class="type">void</span> <span class="name">rayCast</span>(<span class="type"><a href="qml-bacon2d-raycast.html">RayCast</a></span><i> ray</i>, <span class="type">QPointF</span><i> point1</i>, <span class="type">QPointF</span><i> point2</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@rayCast -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>

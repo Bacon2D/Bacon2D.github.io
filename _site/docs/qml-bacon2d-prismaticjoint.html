@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- joints.qdoc -->
+  <title>PrismaticJoint | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
+</head>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="/contact.html">Contact</a></li>
+   </ul>
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">PrismaticJoint</h1>
+<span class="subtitle"></span>
+<!-- $$$PrismaticJoint-brief -->
+<p>A prismatic joint <a href="#details">More...</a></p>
+<!-- @@@PrismaticJoint -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-joint.html">Joint</a></p>
+</td></tr></table><ul>
+<li><a href="qml-bacon2d-prismaticjoint-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#enableLimit-prop">enableLimit</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#enableMotor-prop">enableMotor</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#localAnchorA-prop">localAnchorA</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#localAnchorB-prop">localAnchorB</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#localAxisA-prop">localAxisA</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#lowerTranslation-prop">lowerTranslation</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#maxMotorTorque-prop">maxMotorTorque</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#motorSpeed-prop">motorSpeed</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#referenceAngle-prop">referenceAngle</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-prismaticjoint.html#upperTranslation-prop">upperTranslation</a></b></b> : float</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">float <b><b><a href="qml-bacon2d-prismaticjoint.html#getJointSpeed-method">getJointSpeed</a></b></b>()</li>
+<li class="fn">float <b><b><a href="qml-bacon2d-prismaticjoint.html#getJointTranslation-method">getJointTranslation</a></b></b>()</li>
+</ul>
+<!-- $$$PrismaticJoint-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>This joint provides one degree of freedom: translation along an axis fixed in <i>bodyA</i>. Relative rotation is prevented. You can use a joint limit to restrict the range of motion and a joint motor to drive the motion or to model joint friction.</p>
+<!-- @@@PrismaticJoint -->
+<h2>Property Documentation</h2>
+<!-- $$$enableLimit -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="enableLimit-prop"></a><span class="name">enableLimit</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds a flag to enable joint limits.</p>
+</div></div><!-- @@@enableLimit -->
+<br/>
+<!-- $$$enableMotor -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="enableMotor-prop"></a><span class="name">enableMotor</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds a flag to enable the joint motor.</p>
+</div></div><!-- @@@enableMotor -->
+<br/>
+<!-- $$$localAnchorA -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="localAnchorA-prop"></a><span class="name">localAnchorA</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the local anchor point relative to bodyA's origin</p>
+</div></div><!-- @@@localAnchorA -->
+<br/>
+<!-- $$$localAnchorB -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="localAnchorB-prop"></a><span class="name">localAnchorB</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the local anchor point relative to bodyB's origin</p>
+</div></div><!-- @@@localAnchorB -->
+<br/>
+<!-- $$$localAxisA -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="localAxisA-prop"></a><span class="name">localAxisA</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the local anchor point relative to bodyB's origin</p>
+</div></div><!-- @@@localAxisA -->
+<br/>
+<!-- $$$lowerTranslation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="lowerTranslation-prop"></a><span class="name">lowerTranslation</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@lowerTranslation -->
+<br/>
+<!-- $$$maxMotorTorque -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="maxMotorTorque-prop"></a><span class="name">maxMotorTorque</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds The maximum motor torque used to achieve the desired motor speed.</p>
+</div></div><!-- @@@maxMotorTorque -->
+<br/>
+<!-- $$$motorSpeed -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="motorSpeed-prop"></a><span class="name">motorSpeed</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the desired motor speed. Usually in radians per second.</p>
+</div></div><!-- @@@motorSpeed -->
+<br/>
+<!-- $$$referenceAngle -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="referenceAngle-prop"></a><span class="name">referenceAngle</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the bodyB angle minus bodyA angle in the reference state (radians).</p>
+</div></div><!-- @@@referenceAngle -->
+<br/>
+<!-- $$$upperTranslation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="upperTranslation-prop"></a><span class="name">upperTranslation</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@upperTranslation -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$getJointSpeed -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getJointSpeed-method"></a><span class="type">float</span> <span class="name">getJointSpeed</span>() const</p></td></tr></table></div><div class="qmldoc"><p>Get the current joint translation speed, usually in meters per second.</p>
+</div></div><!-- @@@getJointSpeed -->
+<br/>
+<!-- $$$getJointTranslation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getJointTranslation-method"></a><span class="type">float</span> <span class="name">getJointTranslation</span>() const</p></td></tr></table></div><div class="qmldoc"><p>Get the current joint translation, usually in meters.</p>
+</div></div><!-- @@@getJointTranslation -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>

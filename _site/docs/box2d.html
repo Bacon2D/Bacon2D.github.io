@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- box2d.qdoc -->
+  <title>Box2D | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
+</head>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="/contact.html">Contact</a></li>
+   </ul>
+   <section id="main_content" class="inner">
+  <link rel="prev" href="index.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="index.html">index.html</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#physics-simulation">Physics simulation</a></li>
+<li class="level1"><a href="#core-concepts">Core concepts</a></li>
+<li class="level1"><a href="#forces-and-impulses">Forces and Impulses</a></li>
+<li class="level1"><a href="#components">Components</a></li>
+<li class="level1"><a href="#reporting-bugs">Reporting Bugs</a></li>
+</ul>
+</div>
+<h1 class="title">Box2D</h1>
+<span class="subtitle"></span>
+<!-- $$$box2d.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="physics-simulation"></a>
+<h2>Physics simulation</h2>
+<p><a href="bacon2d-qmlmodule.html">Bacon2D</a> includes Box2D for physics simulation, making it easy to add physics properties to game entities.</p>
+<p>Box2D is a 2D rigid body simulation library for games. Programmers can use it in their games to make objects move in realistic ways and make the game world more interactive.</p>
+<p>Box2D is widely used by many game engines and games, in multiple programming languages. Thus there are lots of great references available to help learn how to effectlive use it in your game. Please note, Box2D uses the term &quot;body&quot; for any item that is participating in the Box2D &quot;world&quot;. The world defines the physics world of the game, and all bodies found in the world can interact/react with other bodies in the world. In <a href="bacon2d-qmlmodule.html">Bacon2D</a> the &quot;world&quot; is provided as part of the <a href="qml-bacon2d-scene.html">Scene</a>, if the scene has the physics property set to true. <a href="bacon2d-qmlmodule.html">Bacon2D</a> provides the <a href="qml-bacon2d-entity.html">Entity</a> component, which when physics are enabled in the scene, becomes a body in the Box2D world. When you see the terms body and world used, you can think of them as a scene and entity in <a href="bacon2d-qmlmodule.html">Bacon2D</a>.</p>
+<a name="core-concepts"></a>
+<h2>Core concepts</h2>
+<ul>
+<li><b>Shape</b>: A shape is 2D geometrical object, such as a circle or polygon. See also <a href="qml-bacon2d-fixture.html">Fixture</a>.</li>
+<li><b>Body</b>: A chunk of matter that is so strong that the distance between any two bits of matter on the chunk is constant. In <a href="bacon2d-qmlmodule.html">Bacon2D</a>, your entities are bodies in Box2D See also <a href="qml-bacon2d-entity.html">Entity</a>.</li>
+<li><b>World</b>: In Box2D, the World defines the physics container in which all bodies become part of. In <a href="bacon2d-qmlmodule.html">Bacon2D</a>, the world is provided by the <a href="qml-bacon2d-scene.html">Scene</a> if physics is enabled. See also <a href="qml-bacon2d-scene.html">Scene</a>.</li>
+<li><b>Fixture</b>: A fixture binds a shape to a body and adds material properties such as density, friction, and restitution. A fixture puts a shape into the collision system (broad-phase) so that it can collide with other shapes. See also <a href="qml-bacon2d-fixture.html">Fixture</a>.</li>
+<li><b>Constraint</b>: A constraint is a physical connection that removes degrees of freedom from bodies. A 2D body has 3 degrees of freedom (two translation coordinates and one rotation coordinate). If we take a body and pin it to the wall (like a pendulum) we have constrained the body to the wall. At this point the body can only rotate about the pin, so the constraint has removed 2 degrees of freedom.</li>
+<li><b>Contact constraint</b>: A special constraint designed to prevent penetration of rigid bodies and to simulate friction and restitution. You do not create contact constraints; they are created automatically by Box2D.</li>
+<li><b>Joint</b>: This is a constraint used to hold two or more bodies together. Box2D supports several joint types: revolute, prismatic, distance, and more. Some joints may have limits and motors.</li>
+<li><b>Joint limit</b>: A joint limit restricts the range of motion of a joint. For example, the human elbow only allows a certain range of angles.</li>
+<li><b>Joint motor</b>: A joint motor drives the motion of the connected bodies according to the joint's degrees of freedom. For example, you can use a motor to drive the rotation of an elbow.</li>
+<li><b>Solver</b>: The physics world has a solver that is used to advance time and to resolve contact and joint constraints. The Box2D solver is a high performance iterative solver that operates in order N time, where N is the number of constraints.</li>
+<li><b>Continuous collision</b>: The solver advances bodies in time using discrete time steps. Without intervention this can lead to tunneling.</li>
+</ul>
+<a name="forces-and-impulses"></a>
+<h2>Forces and Impulses</h2>
+<p>You can apply forces, torques, and impulses to a body. When you apply a force or an impulse, you provide a world point where the load is applied. This often results in a torque about the center of mass.</p>
+<p>Applying a force, torque, or impulse wakes the body. Sometimes this is undesirable. For example, you may be applying a steady force and want to allow the body to sleep to improve performance. In this case you can use the following code.</p>
+<a name="components"></a>
+<h0>Components</h0>
+<ul>
+<li><a href="qml-bacon2d-entity.html">Entity</a></li>
+<li><a href="qml-bacon2d-fixture.html">Fixture</a></li>
+<li><a href="qml-bacon2d-joint.html">Joint</a></li>
+<li><a href="qml-bacon2d-distancejoint.html">DistanceJoint</a></li>
+<li><a href="qml-bacon2d-prismaticjoint.html">PrismaticJoint</a></li>
+<li><a href="qml-bacon2d-revolutejoint.html">RevoluteJoint</a></li>
+<li><a href="qml-bacon2d-motorjoint.html">MotorJoint</a></li>
+<li><a href="qml-bacon2d-weldjoint.html">WeldJoint</a></li>
+<li><a href="qml-bacon2d-pulleyjoint.html">PulleyJoint</a></li>
+<li><a href="qml-bacon2d-frictionjoint.html">FrictionJoint</a></li>
+<li><a href="qml-bacon2d-wheeljoint.html">WheelJoint</a></li>
+<li><a href="qml-bacon2d-mousejoint.html">MouseJoint</a></li>
+<li><a href="qml-bacon2d-gearjoint.html">GearJoint</a></li>
+<li><a href="qml-bacon2d-ropejoint.html">RopeJoint</a></li>
+<li><a href="qml-bacon2d-raycast.html">RayCast</a></li>
+</ul>
+<p>Available through:</p>
+<pre class="cpp">import Bacon2D <span class="number">1.0</span></pre>
+<a name="reporting-bugs"></a>
+<h0>Reporting Bugs</h0>
+<p>Please file bugs on <a href="https://github.com/Bacon2D">Github</a></p>
+</div>
+<!-- @@@box2d.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="index.html">index.html</a>
+</p>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>
