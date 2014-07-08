@@ -27,7 +27,7 @@
      <li><a href="/">About</a></li>
      <li><a href="/docs">Documentation</a></li>
      <li><a href="#">FAQs</a></li>
-     <li><a href="#">Contact</a></li>
+     <li><a href="/contact.html">Contact</a></li>
    </ul>
    <section id="main_content" class="inner">
 <div class="toc">
@@ -51,6 +51,8 @@
 <h2>Properties</h2>
 <ul>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#debug-prop">debug</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#enterAnimation-prop">enterAnimation</a></b></b> : Animation</li>
+<li class="fn"><b><b><a href="qml-bacon2d-scene.html#exitAnimation-prop">exitAnimation</a></b></b> : Animation</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#game-prop">game</a></b></b> : Game</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#gravity-prop">gravity</a></b></b> : QPointF</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#physics-prop">physics</a></b></b> : bool</li>
@@ -97,6 +99,51 @@ import Bacon2D 1.0
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="debug-prop"></a><span class="name">debug</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>* *</p>
 <p>This property allows toggling debug mode, if enabled along with physics, an overlay showing fixtures will be shown.</p>
 </div></div><!-- @@@debug -->
+<br/>
+<!-- $$$enterAnimation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="enterAnimation-prop"></a><span class="name">enterAnimation</span> : <span class="type">Animation</span></p></td></tr></table></div><div class="qmldoc"><p>Animation that will be triggered when the Scene become the current Scene.</p>
+<p>While Scene is executing the enter animation, running, enabled and focus properties will be set to false and there will be no user interaction until the animation is completed. It is also important to now that properties changed during enter and exit animation will be persisted when the Scene become the current Scene.</p>
+<p>Example usage:</p>
+<pre class="qml">import QtQuick 2.0
+import Bacon2D 1.0
+
+<span class="type"><a href="qml-bacon2d-game.html">Game</a></span> {
+    <span class="name">id</span>: <span class="name">game</span>
+    <span class="name">width</span>: <span class="number">800</span>
+    <span class="name">height</span>: <span class="number">600</span>
+
+    <span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span> {
+        <span class="name">id</span>: <span class="name">scene</span>
+        <span class="name">width</span>: <span class="number">300</span>
+        <span class="name">height</span>: <span class="number">300</span>
+
+        <span class="name">enterAnimation</span>: <span class="name">NumberAnimation</span>{ <span class="name">target</span>:<span class="name">scene</span>; <span class="name">property</span>: <span class="string">&quot;x&quot;</span>; <span class="name">from</span>: <span class="number">500</span>; <span class="name">to</span>: <span class="number">0</span>; <span class="name">duration</span>: <span class="number">300</span>}
+        <span class="name">enterAnimation</span>: <span class="name">NumberAnimation</span>{ <span class="name">target</span>:<span class="name">scene</span>; <span class="name">property</span>: <span class="string">&quot;x&quot;</span>; <span class="name">from</span>: <span class="number">0</span>; <span class="name">to</span>: <span class="number">500</span>; <span class="name">duration</span>: <span class="number">300</span>}
+    }
+}</pre>
+</div></div><!-- @@@enterAnimation -->
+<br/>
+<!-- $$$exitAnimation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="exitAnimation-prop"></a><span class="name">exitAnimation</span> : <span class="type">Animation</span></p></td></tr></table></div><div class="qmldoc"><p>Animation that will be triggered when the Scene exits the screen. While Scene is executing the exit animation, running, enabled and focus properties will be set to false and there will be no user interaction until the animation is completed, but the Scene continue to be visible untile the animation ends. It is also important to now that properties changed by the enter and exit animation will be persisted when the Scene become the current Scene.</p>
+<p>Example usage:</p>
+<pre class="qml">import QtQuick 2.0
+import Bacon2D 1.0
+
+<span class="type"><a href="qml-bacon2d-game.html">Game</a></span> {
+    <span class="name">id</span>: <span class="name">game</span>
+    <span class="name">width</span>: <span class="number">800</span>
+    <span class="name">height</span>: <span class="number">600</span>
+
+    <span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span> {
+        <span class="name">id</span>: <span class="name">scene</span>
+        <span class="name">width</span>: <span class="number">300</span>
+        <span class="name">height</span>: <span class="number">300</span>
+
+        <span class="name">enterAnimation</span>: <span class="name">NumberAnimation</span>{ <span class="name">target</span>:<span class="name">scene</span>; <span class="name">property</span>: <span class="string">&quot;x&quot;</span>; <span class="name">from</span>: <span class="number">500</span>; <span class="name">to</span>: <span class="number">0</span>; <span class="name">duration</span>: <span class="number">300</span>}
+        <span class="name">enterAnimation</span>: <span class="name">NumberAnimation</span>{ <span class="name">target</span>:<span class="name">scene</span>; <span class="name">property</span>: <span class="string">&quot;x&quot;</span>; <span class="name">from</span>: <span class="number">0</span>; <span class="name">to</span>: <span class="number">500</span>; <span class="name">duration</span>: <span class="number">300</span>}
+    }
+}</pre>
+</div></div><!-- @@@exitAnimation -->
 <br/>
 <!-- $$$game -->
 <div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="game-prop"></a><span class="name">game</span> : <span class="type"><a href="qml-bacon2d-game.html">Game</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Game that contains the Scene.</p>
