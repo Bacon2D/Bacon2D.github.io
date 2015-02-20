@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ubuntu-getting-started.qdoc -->
+  <title>Tutorial - Getting Started for Ubuntu Touch | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
+</head>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="/contact.html">Contact</a></li>
+   </ul>
+   <section id="main_content" class="inner">
+  <link rel="prev" href="intro.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="intro.html">Tutorial - Bacon2D Introduction</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#more-info">More info</a></li>
+</ul>
+</div>
+<h1 class="title">Tutorial - Getting Started for Ubuntu Touch</h1>
+<span class="subtitle"></span>
+<!-- $$$ubuntu-touch-getting-started.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>To get started on your own game, you'll need to setup your development environment. You'll need Ubuntu 14.04 or later and the Ubuntu SDK, which will give you QtCreator, some QML components and necessary packages to build click packages for Ubuntu Touch. And finally, <a href="bacon2d-qmlmodule.html">Bacon2D</a> from the <a href="bacon2d-qmlmodule.html">Bacon2D</a> Release PPA.</p>
+<p>Ensure you have the proper version of the Ubuntu SDK installed - <a href="http://developer.ubuntu.com/en/start/ubuntu-sdk/installing-the-sdk/">Install the Ubuntu SDK</a></p>
+<p>Install the <a href="bacon2d-qmlmodule.html">Bacon2D</a> game template:</p>
+<pre class="cpp">sudo add<span class="operator">-</span>apt<span class="operator">-</span>repository ppa:bacon2d<span class="operator">-</span>team<span class="operator">/</span>ppa
+sudo apt<span class="operator">-</span>get update <span class="operator">&amp;</span><span class="operator">&amp;</span> sudo apt<span class="operator">-</span>get install qtcreator<span class="operator">-</span><span class="keyword">template</span><span class="operator">-</span>bacon2d</pre>
+<p>Launch the Ubuntu SDK (QtCreator) and open the options dialog by clicking on Tools and then Options in the menu.</p>
+<p class="centerAlign"><img src="images/Options_Ubuntu_Click.png" alt="" /></p><p>Select &quot;Ubuntu&quot; from the left and the &quot;Click&quot; tab. If you do not have a click target from 15.04, create a new one with &quot;Create Click Target&quot;. To build your game for an Ubuntu device, choose &quot;armhf&quot; for the architecture and the 15.04 framework.</p>
+<p class="centerAlign"><img src="images/CreateClickTarget.png" alt="" /></p><p>After the kit is created, you will need to add the <a href="bacon2d-qmlmodule.html">Bacon2D</a> QML plugin manually. Find the click target you just created in the list and click &quot;Maintain&quot;. This will open a terminal in the target chroot. To install the plugin, run the following command in the terminal:</p>
+<pre class="cpp">apt<span class="operator">-</span>get install qtdeclarative5<span class="operator">-</span>bacon2d1<span class="operator">.</span><span class="number">0</span>:armhf <span class="operator">&amp;</span><span class="operator">&amp;</span> exit</pre>
+<p>This will close the terminal, now your kit is ready to build <a href="bacon2d-qmlmodule.html">Bacon2D</a> games!</p>
+<p>Lets create a new <a href="bacon2d-qmlmodule.html">Bacon2D</a> game project.</p>
+<p class="centerAlign"><img src="images/ubuntu_sdk_new_project.png" alt="" /></p><p class="centerAlign"><img src="images/wizard-1.png" alt="" /></p><p class="centerAlign"><img src="images/wizard-2.png" alt="" /></p><p class="centerAlign"><img src="images/wizard-3.png" alt="" /></p><p class="centerAlign"><img src="images/wizard-4.png" alt="" /></p><p>Once the new project is created, you'll notice the template provided a simple example to build on.</p>
+<p>Now that you have a skeleton for your first <a href="bacon2d-qmlmodule.html">Bacon2D</a> game, have some fun!</p>
+<a name="more-info"></a>
+<h2>More info</h2>
+<p>For complete API documentation, please visit <a href="http://bacon2d.com/docs">http://bacon2d.com/docs</a></p>
+</div>
+<!-- @@@ubuntu-touch-getting-started.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="intro.html">Tutorial - Bacon2D Introduction</a>
+</p>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>
