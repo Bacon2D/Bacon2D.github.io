@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+{% include header.html %}
+
+  <body>
+
+    {% include face.html %}
+
+    <div id="main_content_wrap" class="outer">
+
+        {% include nav.html %}
+
+        <section id="main_content" class="inner">
+            {{ content }}
+        </section>
+
+        {% include footer.html %}
+    </body>
+</html>

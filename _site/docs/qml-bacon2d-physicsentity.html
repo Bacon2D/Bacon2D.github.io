@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- PhysicsEntity.qml -->
+  <title>PhysicsEntity | Bacon2D </title>
+  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
+</head>
+<li id="buildversion">
+</li>
+<body>
+ <div id="header_wrap" class="outer">
+     <header class="inner">
+       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
+       <p id="logo"/>
+       <h1 id="project_title">Bacon2D</h1>
+       <h2 id="project_tagline">2D Game Engine for QML</h2>
+     </header>
+ </div>
+ <div id="main_content_wrap" class="outer">
+   <ul id="nav">
+     <li><a href="/">About</a></li>
+     <li><a href="/docs">Documentation</a></li>
+     <li><a href="#">FAQs</a></li>
+     <li><a href="/contact.html">Contact</a></li>
+   </ul>
+   <section id="main_content" class="inner">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">PhysicsEntity</h1>
+<span class="subtitle"></span>
+<!-- $$$PhysicsEntity-brief -->
+<p>An <a href="qml-bacon2d-entity.html">Entity</a> that participates in the <a href="box2d.html">Box2D</a> physics world <a href="#details">More...</a></p>
+<!-- @@@PhysicsEntity -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr><tr><td class="memItemLeft rightAlign topAlign"> Inherits:</td><td class="memItemRight bottomAlign"> <p><a href="qml-bacon2d-entity.html">Entity</a></p>
+</td></tr></table><ul>
+<li><a href="qml-bacon2d-physicsentity-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#active-prop">active</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#angularDamping-prop">angularDamping</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#angularVelocity-prop">angularVelocity</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#awake-prop">awake</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#body-prop">body</a></b></b> : Body</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#bodyType-prop">bodyType</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#bullet-prop">bullet</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#fixedRotation-prop">fixedRotation</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#fixtures-prop">fixtures</a></b></b> : list&lt;Fixture&gt;</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#gravityScale-prop">gravityScale</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#linearDamping-prop">linearDamping</a></b></b> : float</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#linearVelocity-prop">linearVelocity</a></b></b> : QPointF</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#sleepingAllowed-prop">sleepingAllowed</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#world-prop">world</a></b></b> : World</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#bodyCreated-signal">bodyCreated</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#applyAngularImpulse-method">applyAngularImpulse</a></b></b>(<i>impulse</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#applyForce-method">applyForce</a></b></b>(<i>force</i>,  <i>point</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#applyForceToCenter-method">applyForceToCenter</a></b></b>(<i>force</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#applyLinearImpulse-method">applyLinearImpulse</a></b></b>(<i>impulse</i>,  <i>point</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#applyTorque-method">applyTorque</a></b></b>(<i>torque</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#getInertia-method">getInertia</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#getLinearVelocityFromLocalPoint-method">getLinearVelocityFromLocalPoint</a></b></b>(<i>point</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#getLinearVelocityFromWorldPoint-method">getLinearVelocityFromWorldPoint</a></b></b>(<i>point</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#getLocalCenter-method">getLocalCenter</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#getMass-method">getMass</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#getWorldCenter-method">getWorldCenter</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#resetMassData-method">resetMassData</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#toLocalPoint-method">toLocalPoint</a></b></b>(<i>worldPoint</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#toLocalVector-method">toLocalVector</a></b></b>(<i>worldVector</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#toWorldPoint-method">toWorldPoint</a></b></b>(<i>localPoint</i>)</li>
+<li class="fn"><b><b><a href="qml-bacon2d-physicsentity.html#toWorldVector-method">toWorldVector</a></b></b>(<i>localVector</i>)</li>
+</ul>
+<!-- $$$PhysicsEntity-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<!-- @@@PhysicsEntity -->
+<h2>Property Documentation</h2>
+<!-- $$$active -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="active-prop"></a><span class="name">active</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Returns true if the Body is active, or False if it is sleeping</p>
+</div></div><!-- @@@active -->
+<br/>
+<!-- $$$angularDamping -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="angularDamping-prop"></a><span class="name">angularDamping</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property is used to reduce the angular velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.</p>
+</div></div><!-- @@@angularDamping -->
+<br/>
+<!-- $$$angularVelocity -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="angularVelocity-prop"></a><span class="name">angularVelocity</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the angular velocity of the entity.</p>
+</div></div><!-- @@@angularVelocity -->
+<br/>
+<!-- $$$awake -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="awake-prop"></a><span class="name">awake</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Returns True if the Body is awake, or False if it is sleeping.</p>
+</div></div><!-- @@@awake -->
+<br/>
+<!-- $$$body -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="body-prop"></a><span class="name">body</span> : <span class="type">Body</span></p></td></tr></table></div><div class="qmldoc"><p><a href="box2d.html">Box2D</a> Bodyin the physics world</p>
+</div></div><!-- @@@body -->
+<br/>
+<!-- $$$bodyType -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="bodyType-prop"></a><span class="name">bodyType</span> : <span class="type">enumeration</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the current body type.</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th  colspan="2" rowspan=" 1"><i>PhysicsEntity::BodyType</i> is an enumeration:</th></tr>
+<tr class="qt-style"><th >Type</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Body.Static (default)</td><td >A static body does not move under simulation and behaves as if it has infinite mass. Internally, <a href="box2d.html">Box2D</a> stores zero for the mass and the inverse mass. Static bodies can be moved manually by the user. A static body has zero velocity. Static bodies do not collide with other static or kinematic bodies.</td></tr>
+<tr valign="top" class="even"><td >Body.Kinematic</td><td >A kinematic body moves under simulation according to its velocity. Kinematic bodies do not respond to forces. They can be moved manually by the user, but normally a kinematic body is moved by setting its velocity. A kinematic body behaves as if it has infinite mass, however, <a href="box2d.html">Box2D</a> stores zero for the mass and the inverse mass. Kinematic bodies do not collide with other kinematic or static bodies.</td></tr>
+<tr valign="top" class="odd"><td >Body.Dynamic</td><td >A dynamic body is fully simulated. They can be moved manually by the user, but normally they move according to forces. A dynamic body can collide with all body types. A dynamic body always has finite, non-zero mass. If you try to set the mass of a dynamic body to zero, it will automatically acquire a mass of one kilogram and it won’t rotate.</td></tr>
+</table>
+</div></div><!-- @@@bodyType -->
+<br/>
+<!-- $$$bullet -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="bullet-prop"></a><span class="name">bullet</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Game simulation usually generates a sequence of images that are played at some frame rate. This is called discrete simulation. In discrete simulation, rigid bodies can move by a large amount in one time step. If a physics engine doesn't account for the large motion, you may see some objects incorrectly pass through each other. This effect is called tunneling.</p>
+<p>By default, <a href="box2d.html">Box2D</a> uses continuous collision detection (CCD) to prevent dynamic bodies from tunneling through static bodies. This is done by sweeping shapes from their old position to their new positions. The engine looks for new collisions during the sweep and computes the time of impact (TOI) for these collisions. Bodies are moved to their first TOI and then the solver performs a sub-step to complete the full time step. There may be additional TOI events within a sub-step.</p>
+<p>Normally CCD is not used between dynamic bodies. This is done to keep performance reasonable. In some game scenarios you need dynamic bodies to use CCD. For example, you may want to shoot a high speed bullet at a stack of dynamic bricks. Without CCD, the bullet might tunnel through the bricks. Fast moving objects in <a href="box2d.html">Box2D</a> can be labeled as bullets. Bullets will perform CCD with both static and dynamic bodies. You should decide what bodies should be bullets based on your game design.</p>
+</div></div><!-- @@@bullet -->
+<br/>
+<!-- $$$fixedRotation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fixedRotation-prop"></a><span class="name">fixedRotation</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>property alias fixedRotation: itemBody.fixedRotation</p>
+<p>You may want a rigid body, such as a character, to have a fixed rotation. Such a body should not rotate, even under load. You can use the fixedRotation property to achieve this.</p>
+</div></div><!-- @@@fixedRotation -->
+<br/>
+<!-- $$$fixtures -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fixtures-prop"></a><span class="name">fixtures</span> : <span class="type">list</span>&lt;<span class="type"><a href="qml-bacon2d-fixture.html">Fixture</a></span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property holds a list of <a href="box2d.html">Box2D</a> fixtures contained within the current Body.</p>
+</div></div><!-- @@@fixtures -->
+<br/>
+<!-- $$$gravityScale -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gravityScale-prop"></a><span class="name">gravityScale</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property represents the scale to adjust the gravity on a single entity.</p>
+</div></div><!-- @@@gravityScale -->
+<br/>
+<!-- $$$linearDamping -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="linearDamping-prop"></a><span class="name">linearDamping</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property is used to reduce the linear velocity. The damping parameter can be larger than 1.0f but the damping effect becomes sensitive to the time step when the damping parameter is large.</p>
+</div></div><!-- @@@linearDamping -->
+<br/>
+<!-- $$$linearVelocity -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="linearVelocity-prop"></a><span class="name">linearVelocity</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the linear velocity of the entity's origin in world co-ordinates.</p>
+</div></div><!-- @@@linearVelocity -->
+<br/>
+<!-- $$$sleepingAllowed -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sleepingAllowed-prop"></a><span class="name">sleepingAllowed</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>What does sleep mean? Well it is expensive to simulate bodies, so the less we have to simulate the better. When a body comes to rest we would like to stop simulating it.</p>
+<p>When <a href="box2d.html">Box2D</a> determines that a body (or group of bodies) has come to rest, the body enters a sleep state which has very little CPU overhead. If a body is awake and collides with a sleeping body, then the sleeping body wakes up. Bodies will also wake up if a joint or contact attached to them is destroyed. You can also wake a body manually.</p>
+<p>The sleepingAllowed property lets you specify whether a body can sleep and whether a body is created sleeping.</p>
+</div></div><!-- @@@sleepingAllowed -->
+<br/>
+<!-- $$$world -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="world-prop"></a><span class="name">world</span> : <span class="type">World</span></p></td></tr></table></div><div class="qmldoc"><p>The world defines the physics world of the game, and all bodies found in the world can interact/react with other bodies in the world.</p>
+</div></div><!-- @@@world -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$bodyCreated -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="bodyCreated-signal"></a><span class="name">bodyCreated</span>()</p></td></tr></table></div><div class="qmldoc"><p>Emitted when the <a href="box2d.html">Box2D</a> body has finished initialization</p>
+</div></div><!-- @@@bodyCreated -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$applyAngularImpulse -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="applyAngularImpulse-method"></a><span class="name">applyAngularImpulse</span>(<i> impulse</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@applyAngularImpulse -->
+<br/>
+<!-- $$$applyForce -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="applyForce-method"></a><span class="name">applyForce</span>(<i> force</i>, <i> point</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@applyForce -->
+<br/>
+<!-- $$$applyForceToCenter -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="applyForceToCenter-method"></a><span class="name">applyForceToCenter</span>(<i> force</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@applyForceToCenter -->
+<br/>
+<!-- $$$applyLinearImpulse -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="applyLinearImpulse-method"></a><span class="name">applyLinearImpulse</span>(<i> impulse</i>, <i> point</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@applyLinearImpulse -->
+<br/>
+<!-- $$$applyTorque -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="applyTorque-method"></a><span class="name">applyTorque</span>(<i> torque</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@applyTorque -->
+<br/>
+<!-- $$$getInertia -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getInertia-method"></a><span class="name">getInertia</span>()</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getInertia -->
+<br/>
+<!-- $$$getLinearVelocityFromLocalPoint -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getLinearVelocityFromLocalPoint-method"></a><span class="name">getLinearVelocityFromLocalPoint</span>(<i> point</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getLinearVelocityFromLocalPoint -->
+<br/>
+<!-- $$$getLinearVelocityFromWorldPoint -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getLinearVelocityFromWorldPoint-method"></a><span class="name">getLinearVelocityFromWorldPoint</span>(<i> point</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getLinearVelocityFromWorldPoint -->
+<br/>
+<!-- $$$getLocalCenter -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getLocalCenter-method"></a><span class="name">getLocalCenter</span>()</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getLocalCenter -->
+<br/>
+<!-- $$$getMass -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getMass-method"></a><span class="name">getMass</span>()</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getMass -->
+<br/>
+<!-- $$$getWorldCenter -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getWorldCenter-method"></a><span class="name">getWorldCenter</span>()</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getWorldCenter -->
+<br/>
+<!-- $$$resetMassData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="resetMassData-method"></a><span class="name">resetMassData</span>()</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@resetMassData -->
+<br/>
+<!-- $$$toLocalPoint -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toLocalPoint-method"></a><span class="name">toLocalPoint</span>(<i> worldPoint</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@toLocalPoint -->
+<br/>
+<!-- $$$toLocalVector -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toLocalVector-method"></a><span class="name">toLocalVector</span>(<i> worldVector</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@toLocalVector -->
+<br/>
+<!-- $$$toWorldPoint -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toWorldPoint-method"></a><span class="name">toWorldPoint</span>(<i> localPoint</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@toWorldPoint -->
+<br/>
+<!-- $$$toWorldVector -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toWorldVector-method"></a><span class="name">toWorldVector</span>(<i> localVector</i>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@toWorldVector -->
+<br/>
+ </div>
+ <div id="footer_wrap" class="outer">
+   <footer class="inner">
+     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
+   </footer>
+ </div>
+</body>
+</body>
+</html>
