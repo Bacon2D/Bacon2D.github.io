@@ -1,34 +1,48 @@
-/* Begin Navigation Bar Styling */
-ul#nav {
-  width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0px;
-  list-style: none;
-  overflow: hidden;
-  zoom: 1;
-  background-color: ##f2f2f2;
-}
-ul#nav li {
-  float: left;
-}
-ul#nav li:first-child a {
-   border-left: none;
+
+.navigation {
+    margin: 0 auto;
 }
 
-ul#nav a {
-  width: 8em;
-  display: block;
-  border-left: 1px solid #ccc;
-  padding: 5px;
-  margin-right: 0px;
-  text-decoration: none;
-  color: #069;
-  text-align: center;
-}
-ul#nav a:hover {
-  background-color: #fff;
-  color: #007edf;
+.navigation-items {
+    list-style: none;
+    margin: 0 auto;
+    background: #eee;
 }
 
-/* End navigation bar styling. */
+.navigation-items li {
+}
+
+.navigation-items a {
+    padding: 20px;
+    display: block;
+    text-transform: uppercase;
+    text-align: left;
+    text-decoration: none;
+    color: #000;
+    font-weight: 300
+}
+
+.navigation-items a:hover {
+    color: #FF5555;
+    text-decoration: underline;
+}
+
+/* Media to Large Device Styles */
+@media screen and (min-width: 992px) {
+
+    .navigation {
+
+    }
+
+    .navigation-items li {
+        display: inline-block;
+        border: none;
+    }
+
+    .navigation-items a {
+        font-size: 25px;
+        border-bottom: none;
+        display: inline-block;
+    }
+
+}

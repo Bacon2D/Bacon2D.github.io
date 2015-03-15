@@ -1,0 +1,163 @@
+body {
+    background: #fff;
+}
+
+/* CSS logo */
+.logo {
+    background: #FF8080;
+    position: relative;
+}
+
+.sprite {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    opacity: 0.05;
+    left: 50%;
+    margin-left: -250px;
+}
+
+.eyes {
+    width: 100%;
+    height: 45%;
+}
+
+.eye-a-a,
+.eye-a-b,
+.eye-b-a,
+.eye-b-b {
+    top: 20%;
+    position: relative;
+    width: 13%;
+    height: 25%;
+    float: left;
+    margin: 0;
+    padding:0
+}
+
+.eye-a-a,
+.eye-b-b {
+    background: white;
+}
+
+.eye-a-b,
+.eye-b-a {
+    background: black;
+}
+
+.eye-a-b {
+    margin-right: 37%;
+}
+
+.nose {
+    width: 80%;
+    height: 35%;
+    background: #FF5555;
+    padding: 10%;
+}
+
+.nostril-a,
+.nostril-b {
+    float: left;
+    width: 37%;
+    height: 90%;
+    background: black;
+}
+
+.nostril-a {
+    margin-right: 25%
+}
+
+.main {
+    background: rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+footer {
+    background: #212121;
+}
+
+/* download */
+
+#downloads {
+    position: absolute;
+    width: 210px;
+    z-index: 10;
+    bottom: -40px;
+    right: 0;
+    height: 70px;
+    background: url('../images/icon_download.png') no-repeat 0% 90%;
+}
+
+.zip_download_link {
+    display: block;
+    float: right;
+    width: 90px;
+    height:70px;
+    text-indent: -5000px;
+    overflow: hidden;
+    background: url(../images/sprite_download.png) no-repeat bottom left;
+}
+
+.tar_download_link {
+    display: block;
+    float: right;
+    width: 90px;
+    height:70px;
+    text-indent: -5000px;
+    overflow: hidden;
+    background: url(../images/sprite_download.png) no-repeat bottom right;
+    margin-left: 10px;
+}
+
+.zip_download_link:hover {
+    background: url(../images/sprite_download.png) no-repeat top left;
+}
+
+.tar_download_link:hover {
+    background: url(../images/sprite_download.png) no-repeat top right;
+}
+
+
+.feature {
+    background: rgba(255,255,255,0.4);
+    height: 500px;
+    margin: -30px auto 0;
+}
+
+/* forkme button */
+
+.forkme {
+    color: rgba(0, 0, 0, 0);
+    height: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 33px;
+    display: block;
+    position: absolute;
+    top:0;
+    right: 10px;
+    z-index: 10;
+    background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+@media screen and (min-width: 992px) {
+
+    .forkme {
+        position: absolute;
+        top:0;
+        right: 10px;
+        padding: 10px 50px 10px 10px;
+        color: #fff;
+        height: auto;
+        overflow: visible;
+        white-space: normal;
+        width: auto;
+    }
+
+
+}
