@@ -3,18 +3,24 @@
 {% include header.html %}
 <body>
     <div class="wrap">
-        {% include face.html %}
-        <nav class="navigation">
-            {% include nav.html %}
-        </nav>
-        <div class="main">
-            <section class="feature">
 
+        {% include face.html %}
+
+        <div class="main">
+
+            {% if page.feature %}
+            <section class="feature">
+                {{ page.feature }}
             </section>
+            {% endif %}
+
             <section class="content">
-                {{ content }}
+                <div class="content-inner">
+                    {{ content }}
+                </div>
             </section>
         </div>
+
         {% include footer.html %}
     </div>
 </body>

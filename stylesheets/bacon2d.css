@@ -1,20 +1,19 @@
 body {
-    background: #fff;
+    background: #F2F2F2;
+}
+
+.face {
+    background: #212121;
+    background: -moz-linear-gradient(top, #373737, #212121);
+    background: -webkit-linear-gradient(top, #373737, #212121);
+    background: -ms-linear-gradient(top, #373737, #212121);
+    background: -o-linear-gradient(top, #373737, #212121);
+    background: linear-gradient(top, #373737, #212121);
 }
 
 /* CSS logo */
 .logo {
     background: #FF8080;
-    position: relative;
-}
-
-.sprite {
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    opacity: 0.05;
-    left: 50%;
-    margin-left: -250px;
 }
 
 .eyes {
@@ -67,15 +66,37 @@ body {
 .nostril-a {
     margin-right: 25%
 }
+/* end css logo */
 
 .main {
-    background: rgba(0,0,0,0.05);
-    padding: 30px;
+
+}
+
+.title {
+    color: #fff;
+    font-weight: 500;
+    text-shadow: #111 0 0 10px;
+    font-size: 24px;
+}
+
+.tagline {
+    border: none;
+    background: none;
+}
+
+.content {
+    background: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content :first-child {
+    margin-top: 0;
 }
 
 footer {
-    background: #212121;
+
 }
+
 
 /* download */
 
@@ -118,14 +139,15 @@ footer {
     background: url(../images/sprite_download.png) no-repeat top right;
 }
 
+/* forkme button */
 
-.feature {
-    background: rgba(255,255,255,0.4);
-    height: 500px;
-    margin: -30px auto 0;
+.github-feature {
+    text-align: center;
 }
 
-/* forkme button */
+.github-feature p {
+    font-size: 30px;
+}
 
 .forkme {
     color: rgba(0, 0, 0, 0);
@@ -133,31 +155,26 @@ footer {
     overflow: hidden;
     white-space: nowrap;
     width: 33px;
-    display: block;
-    position: absolute;
-    top:0;
-    right: 10px;
-    z-index: 10;
-    background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+    display: inline-block;
+    background: url('../images/blacktocat.png') #0090ff no-repeat 93% 50%;
     font-weight: 700;
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    font-size: 20px;
     border-bottom-left-radius: 2px;
+    text-decoration: none;
     border-bottom-right-radius: 2px;
+    padding: 20px 50px 20px 20px;
+    color: #fff;
+    height: auto;
+    overflow: visible;
+    white-space: normal;
+    width: 230px;
 }
 
+/* Media to Large Device Styles */
 @media screen and (min-width: 992px) {
 
-    .forkme {
-        position: absolute;
-        top:0;
-        right: 10px;
-        padding: 10px 50px 10px 10px;
-        color: #fff;
-        height: auto;
-        overflow: visible;
-        white-space: normal;
-        width: auto;
+    .content {
+        border-radius: 3px;
     }
-
 
 }
