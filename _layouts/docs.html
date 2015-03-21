@@ -2,6 +2,7 @@
 <html>
 <head>
 {% include header.html %}
+<link rel="stylesheet" type="text/css" media="screen" href="{{site.baseurl}}stylesheets/docs.css">
 </head>
 <body>
     <div class="wrap">
@@ -9,15 +10,8 @@
         {% include face.html %}
 
         <div class="main">
-
-            {% if page.feature %}
-            <section class="feature">
-                {{ page.feature }}
-            </section>
-            {% endif %}
-
             <section class="content">
-                <div class="content-inner">
+                <div class="content-inner content-docs">
                     {{ content }}
                 </div>
             </section>
