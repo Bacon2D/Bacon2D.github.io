@@ -1,0 +1,80 @@
+/* Styles for layout, which includes
+    - Height, width
+    - Positioning
+    - Top, left, bottom and right
+    - Margins and paddings
+    - Display property
+*/
+.face {
+    height: 60px;
+    position: relative;
+}
+
+header {
+    margin: 0 auto;
+    position: relative;
+    height: 60px;
+}
+
+/* this places the logo, title */
+.logo, .title {
+    line-height: 1;
+    position: absolute;
+}
+
+.logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin: 0;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+.title {
+    left: 87px;
+    top: 18px;
+    margin: 0;
+}
+
+.feature {
+    margin: 0 auto;
+    padding: 30px 30px 0;
+}
+
+.content {
+    margin: 30px auto 0;
+}
+
+.content-inner {
+    padding: 30px;
+}
+
+
+footer {
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Media to Large Device Styles */
+@media screen and (min-width: 992px) {
+
+    .logo {
+        left: 0;
+    }
+
+    .title {
+        left: 57px;
+    }
+
+
+    header,
+    footer,
+    .content,
+    .feature {
+        max-width: 992px;
+    }
+}
+
