@@ -1,35 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- scene.cpp -->
-  <title>Scene | Bacon2D </title>
-  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
-</head>
-<li id="buildversion">
-</li>
-<body>
- <div id="header_wrap" class="outer">
-     <header class="inner">
-       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
-       <p id="logo"/>
-       <h1 id="project_title">Bacon2D</h1>
-       <h2 id="project_tagline">2D Game Engine for QML</h2>
-     </header>
- </div>
- <div id="main_content_wrap" class="outer">
-   <ul id="nav">
-     <li><a href="/">About</a></li>
-     <li><a href="/docs">Documentation</a></li>
-     <li><a href="#">FAQs</a></li>
-     <li><a href="/contact.html">Contact</a></li>
-   </ul>
-   <section id="main_content" class="inner">
+---
+layout: docs
+title: Docs
+page: docs
+---
+<div class="sidebar">
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
@@ -38,17 +12,18 @@
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
-<h1 class="title">Scene</h1>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Scene QML Type</h1>
 <span class="subtitle"></span>
 <!-- $$$Scene-brief -->
 <p>The root view in the Game. <a href="#details">More...</a></p>
 <!-- @@@Scene -->
-<table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr></table><ul>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Bacon2D 1.0</td></tr></table></div><ul>
 <li><a href="qml-bacon2d-scene-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="properties"></a>
-<h2>Properties</h2>
+<h2 id="properties">Properties</h2>
 <ul>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#debug-prop">debug</a></b></b> : bool</li>
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#enterAnimation-prop">enterAnimation</a></b></b> : Animation</li>
@@ -62,13 +37,14 @@
 <li class="fn"><b><b><a href="qml-bacon2d-scene.html#world-prop">world</a></b></b> : World</li>
 </ul>
 <a name="methods"></a>
-<h2>Methods</h2>
+<h2 id="methods">Methods</h2>
 <ul>
 <li class="fn">void <b><b><a href="qml-bacon2d-scene.html#rayCast-method">rayCast</a></b></b>(RayCast * <i>rayCast</i>, const QPointF &amp; <i>point1</i>, const QPointF &amp; <i>point2</i>)</li>
 </ul>
 <!-- $$$Scene-description -->
 <a name="details"></a>
-<h2>Detailed Description</h2>
+<h2 id="details">Detailed Description</h2>
+</p>
 <p>The Scene component is the root view for the <a href="qml-bacon2d-game.html">Game</a>.</p>
 <p>The size of the Scene can be larger than the size of the <a href="qml-bacon2d-game.html">Game</a>, accessible using a <a href="qml-bacon2d-viewport.html">Viewport</a>. The <a href="qml-bacon2d-viewport.html">Viewport</a> provides xOffset and yOffset properties which can be used to control movement of the Viewport.</p>
 <p>Example usage:</p>
@@ -80,7 +56,7 @@ import Bacon2D 1.0
     <span class="name">width</span>: <span class="number">800</span>
     <span class="name">height</span>: <span class="number">600</span>
 
-    <span class="type">Scene</span> {
+    <span class="type"><a href="qml-bacon2d-scene.html">Scene</a></span> {
         <span class="name">id</span>: <span class="name">scene</span>
         <span class="name">width</span>: <span class="number">1200</span>
         <span class="name">height</span>: <span class="number">800</span>
@@ -96,12 +72,12 @@ import Bacon2D 1.0
 <!-- @@@Scene -->
 <h2>Property Documentation</h2>
 <!-- $$$debug -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="debug-prop"></a><span class="name">debug</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>* *</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="debug-prop"><td class="tblQmlPropNode"><p><a name="debug-prop"></a><span class="name">debug</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>* *</p>
 <p>This property allows toggling debug mode, if enabled along with physics, an overlay showing fixtures will be shown.</p>
 </div></div><!-- @@@debug -->
 <br/>
 <!-- $$$enterAnimation -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="enterAnimation-prop"></a><span class="name">enterAnimation</span> : <span class="type">Animation</span></p></td></tr></table></div><div class="qmldoc"><p>Animation that will be triggered when the Scene become the current Scene.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="enterAnimation-prop"><td class="tblQmlPropNode"><p><a name="enterAnimation-prop"></a><span class="name">enterAnimation</span> : <span class="type">Animation</span></p></td></tr></table></div></div><div class="qmldoc"><p>Animation that will be triggered when the Scene become the current Scene.</p>
 <p>While Scene is executing the enter animation, running, enabled and focus properties will be set to false and there will be no user interaction until the animation is completed. It is also important to now that properties changed during enter and exit animation will be persisted when the Scene become the current Scene.</p>
 <p>Example usage:</p>
 <pre class="qml">import QtQuick 2.0
@@ -124,7 +100,7 @@ import Bacon2D 1.0
 </div></div><!-- @@@enterAnimation -->
 <br/>
 <!-- $$$exitAnimation -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="exitAnimation-prop"></a><span class="name">exitAnimation</span> : <span class="type">Animation</span></p></td></tr></table></div><div class="qmldoc"><p>Animation that will be triggered when the Scene exits the screen. While Scene is executing the exit animation, running, enabled and focus properties will be set to false and there will be no user interaction until the animation is completed, but the Scene continue to be visible untile the animation ends. It is also important to now that properties changed by the enter and exit animation will be persisted when the Scene become the current Scene.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="exitAnimation-prop"><td class="tblQmlPropNode"><p><a name="exitAnimation-prop"></a><span class="name">exitAnimation</span> : <span class="type">Animation</span></p></td></tr></table></div></div><div class="qmldoc"><p>Animation that will be triggered when the Scene exits the screen. While Scene is executing the exit animation, running, enabled and focus properties will be set to false and there will be no user interaction until the animation is completed, but the Scene continue to be visible untile the animation ends. It is also important to now that properties changed by the enter and exit animation will be persisted when the Scene become the current Scene.</p>
 <p>Example usage:</p>
 <pre class="qml">import QtQuick 2.0
 import Bacon2D 1.0
@@ -146,47 +122,37 @@ import Bacon2D 1.0
 </div></div><!-- @@@exitAnimation -->
 <br/>
 <!-- $$$game -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="game-prop"></a><span class="name">game</span> : <span class="type"><a href="qml-bacon2d-game.html">Game</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Game that contains the Scene.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="game-prop"><td class="tblQmlPropNode"><p><a name="game-prop"></a><span class="name">game</span> : <span class="type"><a href="qml-bacon2d-game.html">Game</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the a reference to the Game that contains the Scene.</p>
 </div></div><!-- @@@game -->
 <br/>
 <!-- $$$gravity -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="gravity-prop"></a><span class="name">gravity</span> : <span class="type">QPointF</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the global gravity vector.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="gravity-prop"><td class="tblQmlPropNode"><p><a name="gravity-prop"></a><span class="name">gravity</span> : <span class="type">QPointF</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the global gravity vector.</p>
 <p>The gravity property only applies if physics is enabled.</p>
 </div></div><!-- @@@gravity -->
 <br/>
 <!-- $$$physics -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="physics-prop"></a><span class="name">physics</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>This property determines if the Scene contains a <a href="box2d.html">Box2D</a> physics world</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="physics-prop"><td class="tblQmlPropNode"><p><a name="physics-prop"></a><span class="name">physics</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property determines if the Scene contains a <a href="box2d.html">Box2D</a> physics world</p>
 </div></div><!-- @@@physics -->
 <br/>
 <!-- $$$pixelsPerMeter -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="pixelsPerMeter-prop"></a><span class="name">pixelsPerMeter</span> : <span class="type">float</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the number of pixels per meter.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="pixelsPerMeter-prop"><td class="tblQmlPropNode"><p><a name="pixelsPerMeter-prop"></a><span class="name">pixelsPerMeter</span> : <span class="type">float</span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the number of pixels per meter.</p>
 <p>The physics world uses meters to measure velocity, movement, etc. This property only applies with physics enabled.</p>
 </div></div><!-- @@@pixelsPerMeter -->
 <br/>
 <!-- $$$running -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>The current running state of Scene</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="running-prop"><td class="tblQmlPropNode"><p><a name="running-prop"></a><span class="name">running</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current running state of Scene</p>
 </div></div><!-- @@@running -->
 <br/>
 <!-- $$$viewport -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="viewport-prop"></a><span class="name">viewport</span> : <span class="type"><a href="qml-bacon2d-viewport.html">Viewport</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the Viewport for the current Scene.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="viewport-prop"><td class="tblQmlPropNode"><p><a name="viewport-prop"></a><span class="name">viewport</span> : <span class="type"><a href="qml-bacon2d-viewport.html">Viewport</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the a reference to the Viewport for the current Scene.</p>
 </div></div><!-- @@@viewport -->
 <br/>
 <!-- $$$world -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="world-prop"></a><span class="name">world</span> : <span class="type">World</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the a reference to the World attached to the Scene.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="world-prop"><td class="tblQmlPropNode"><p><a name="world-prop"></a><span class="name">world</span> : <span class="type">World</span></p></td></tr></table></div></div><div class="qmldoc"><p>Holds the a reference to the World attached to the Scene.</p>
 </div></div><!-- @@@world -->
 <br/>
 <h2>Method Documentation</h2>
 <!-- $$$rayCast -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="rayCast-method"></a><span class="type">void</span> <span class="name">rayCast</span>(<span class="type"><a href="qml-bacon2d-raycast.html">RayCast</a></span> *<i> rayCast</i>, const <span class="type">QPointF</span> &amp;<i> point1</i>, const <span class="type">QPointF</span> &amp;<i> point2</i>)</p></td></tr></table></div><div class="qmldoc"><p>The rayCast method can be used to do line-of-sight checks, fire guns, etc.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="rayCast-method"><td class="tblQmlFuncNode"><p><a name="rayCast-method"></a><span class="type">void</span> <span class="name">rayCast</span>(<span class="type"><a href="qml-bacon2d-raycast.html">RayCast</a></span> *<i> rayCast</i>, const <span class="type">QPointF</span> &amp;<i> point1</i>, const <span class="type">QPointF</span> &amp;<i> point2</i>)</p></td></tr></table></div></div><div class="qmldoc"><p>The rayCast method can be used to do line-of-sight checks, fire guns, etc.</p>
 <p>The rayCast method is only useful with physics is enabled.</p>
 </div></div><!-- @@@rayCast -->
-<br/>
- </div>
- <div id="footer_wrap" class="outer">
-   <footer class="inner">
-     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
-   </footer>
- </div>
-</body>
-</body>
-</html>

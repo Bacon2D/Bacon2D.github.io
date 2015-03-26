@@ -1,35 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- sprite.cpp -->
-  <title>Sprite | Bacon2D </title>
-  <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-  <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/online.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/stylesheet.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/navbar.css" />
-</head>
-<li id="buildversion">
-</li>
-<body>
- <div id="header_wrap" class="outer">
-     <header class="inner">
-       <a id="forkme_banner" href="https://github.com/Bacon2D/Bacon2D">Fork me on GitHub</a>
-       <p id="logo"/>
-       <h1 id="project_title">Bacon2D</h1>
-       <h2 id="project_tagline">2D Game Engine for QML</h2>
-     </header>
- </div>
- <div id="main_content_wrap" class="outer">
-   <ul id="nav">
-     <li><a href="/">About</a></li>
-     <li><a href="/docs">Documentation</a></li>
-     <li><a href="#">FAQs</a></li>
-     <li><a href="/contact.html">Contact</a></li>
-   </ul>
-   <section id="main_content" class="inner">
+---
+layout: docs
+title: Docs
+page: docs
+---
+<div class="sidebar">
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
 <ul>
@@ -37,17 +11,18 @@
 <li class="level1"><a href="#details">Detailed Description</a></li>
 </ul>
 </div>
-<h1 class="title">Sprite</h1>
+<div class="sidebar-content" id="sidebar-content"></div></div>
+<h1 class="title">Sprite QML Type</h1>
 <span class="subtitle"></span>
 <!-- $$$Sprite-brief -->
 <p>A Sprite, providing state based management of multiple <a href="qml-bacon2d-spriteanimation.html">SpriteAnimation</a> animations. <a href="#details">More...</a></p>
 <!-- @@@Sprite -->
-<table class="alignedsummary">
-<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> </b><tt>import Bacon2D 1.0</tt></td></tr></table><ul>
+<div class="table"><table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Import Statement:</td><td class="memItemRight bottomAlign"> import Bacon2D 1.0</td></tr></table></div><ul>
 <li><a href="qml-bacon2d-sprite-members.html">List of all members, including inherited members</a></li>
 </ul>
 <a name="properties"></a>
-<h2>Properties</h2>
+<h2 id="properties">Properties</h2>
 <ul>
 <li class="fn"><b><b><a href="qml-bacon2d-sprite.html#animation-prop">animation</a></b></b> : string</li>
 <li class="fn"><b><b><a href="qml-bacon2d-sprite.html#horizontalMirror-prop">horizontalMirror</a></b></b> : bool</li>
@@ -56,31 +31,22 @@
 </ul>
 <!-- $$$Sprite-description -->
 <a name="details"></a>
-<h2>Detailed Description</h2>
+<h2 id="details">Detailed Description</h2>
+</p>
 <!-- @@@Sprite -->
 <h2>Property Documentation</h2>
 <!-- $$$animation -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="animation-prop"></a><span class="name">animation</span> : <span class="type">string</span></p></td></tr></table></div><div class="qmldoc"><p>The current <a href="qml-bacon2d-spriteanimation.html">SpriteAnimation</a> state of the Sprite as a string</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="animation-prop"><td class="tblQmlPropNode"><p><a name="animation-prop"></a><span class="name">animation</span> : <span class="type">string</span></p></td></tr></table></div></div><div class="qmldoc"><p>The current <a href="qml-bacon2d-spriteanimation.html">SpriteAnimation</a> state of the Sprite as a string</p>
 </div></div><!-- @@@animation -->
 <br/>
 <!-- $$$horizontalMirror -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="horizontalMirror-prop"></a><span class="name">horizontalMirror</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Shows the Sprite mirrored horizontally</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="horizontalMirror-prop"><td class="tblQmlPropNode"><p><a name="horizontalMirror-prop"></a><span class="name">horizontalMirror</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Shows the Sprite mirrored horizontally</p>
 </div></div><!-- @@@horizontalMirror -->
 <br/>
 <!-- $$$spriteState -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="spriteState-prop"></a><span class="name">spriteState</span> : <span class="type"><a href="bacon2d-qmlmodule.html">Bacon2D</a></span>.<span class="type"><a href="qml-bacon2d-state.html">State</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the current spriteState.</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="spriteState-prop"><td class="tblQmlPropNode"><p><a name="spriteState-prop"></a><span class="name">spriteState</span> : <span class="type"><a href="index.html">Bacon2D</a></span>.<span class="type"><a href="qml-bacon2d-state.html">State</a></span></p></td></tr></table></div></div><div class="qmldoc"><p>This property holds the current spriteState.</p>
 </div></div><!-- @@@spriteState -->
 <br/>
 <!-- $$$verticalMirror -->
-<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="verticalMirror-prop"></a><span class="name">verticalMirror</span> : <span class="type">bool</span></p></td></tr></table></div><div class="qmldoc"><p>Shows the Sprite mirrored vertically (upside down)</p>
+<div class="qmlitem"><div class="qmlproto"><div class="table"><table class="qmlname"><tr valign="top" class="odd" id="verticalMirror-prop"><td class="tblQmlPropNode"><p><a name="verticalMirror-prop"></a><span class="name">verticalMirror</span> : <span class="type">bool</span></p></td></tr></table></div></div><div class="qmldoc"><p>Shows the Sprite mirrored vertically (upside down)</p>
 </div></div><!-- @@@verticalMirror -->
-<br/>
- </div>
- <div id="footer_wrap" class="outer">
-   <footer class="inner">
-     <!-- <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p> -->
-   </footer>
- </div>
-</body>
-</body>
-</html>
