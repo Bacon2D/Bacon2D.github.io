@@ -52,13 +52,14 @@ import Bacon2D 1.0
         <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span>
 
         <span class="type"><a href="qml-bacon2d-entity.html">Entity</a></span> {
+            <span class="name">id</span>: <span class="name">entity</span>
             <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
             <span class="name">height</span>: <span class="name">parent</span>.<span class="name">height</span>
             <span class="name">updateInterval</span>: <span class="number">50</span>
             <span class="name">behavior</span>: <span class="name">ScriptBehavior</span> {
                 <span class="name">script</span>: {
                     var <span class="name">newPos</span> = <span class="name">entity</span>.<span class="name">x</span> <span class="operator">+</span> <span class="number">5</span>
-                    <span class="name">entity</span>.<span class="name">x</span> <span class="operator">=</span> <span class="name">newPos</span> <span class="operator">&gt;</span> <span class="name">parent</span>.<span class="name">width</span> ? <span class="number">0</span> : <span class="name">newPos</span>
+                    <span class="name">entity</span>.<span class="name">x</span> <span class="operator">=</span> <span class="name">newPos</span> <span class="operator">&gt;</span> <span class="name">entity</span>.<span class="name">parent</span>.<span class="name">width</span> ? <span class="number">0</span> : <span class="name">newPos</span>
                     <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;update: x -&gt; &quot;</span>, <span class="name">entity</span>.<span class="name">x</span>)
                 }
             }
